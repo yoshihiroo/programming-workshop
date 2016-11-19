@@ -4,13 +4,11 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(7) == LOW) // is Obstacle
-  {
+  if (digitalRead(7) == LOW) { // is Obstacle
     Serial.println("OBSTACLE!!, OBSTACLE!!");
   }
-  else // no Obstacle
-  {
+  else { // no Obstacle
     Serial.println("clear");
-  }
+  }  
   delay(200);
 }
