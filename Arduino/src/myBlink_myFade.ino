@@ -1,7 +1,3 @@
-void setup() {
-  pinMode(9, OUTPUT);
-}
-
 void loop() {
   myBlink();
   myFade();
@@ -17,16 +13,12 @@ void myBlink() {
 }
 
 void myFade() {
-  int i = 0;
-  while (i < 256) {
+  for (int i = 0; i <= 255; i=i+5) {
     analogWrite(9, i);
-    i = i + 5;
     delay(10);
   }
-  i = 255;
-  while (i > 0) {
+  for (int i = 255; i >= 0; i=i-5) {
     analogWrite(9, i);
-    i = i - 5;
     delay(10);
-  }
+  }  
 }
