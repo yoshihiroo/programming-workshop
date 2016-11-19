@@ -7,6 +7,8 @@ void loop() {
   myFade();
 }
 
+// ----- Functions -----
+
 void myBlink() {
   digitalWrite(9, HIGH);
   delay(500);
