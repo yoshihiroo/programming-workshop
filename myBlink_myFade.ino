@@ -28,5 +28,4 @@ void myFade() {
     i = i - 5;
     delay(10);
   }
-
 }
