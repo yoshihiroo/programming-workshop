@@ -10,10 +10,9 @@ void loop() {
   }
   else // no Obstacle
   {
-    myUpFade(4);
-    myDownFade(4);
+    myFade(20);
   }
-  delay(200);
+  delay(100);
 }
 
 void myBlink(int t) {
@@ -23,20 +22,13 @@ void myBlink(int t) {
   delay(t);
 }
 
-void myUpFade(int s) {
-  int i=0;
-  while (i < 256) {
+void myFade(int t) {
+  for (int i = 0; i <= 255; i=i+5) {
     analogWrite(9, i);
-    i = i + s;
-    delay(10);
+    delay(t);
   }
-}
-
-void myDownFade(int s) {
-  int i=255;
-  while (i > 0) {
+  for (int i = 255; i >= 0; i=i-5) {
     analogWrite(9, i);
-    i = i - s;
-    delay(10);
-  }
+    delay(t);
+  }  
 }
