@@ -4,12 +4,10 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(7) == LOW) // is Obstacle
-  {
+  if (digitalRead(7) == LOW) {  // is Obstacle
     myBlink(300);
   }
-  else // no Obstacle
-  {
+  else {                        // no Obstacle
     myFade(20);
   }
   delay(100);
