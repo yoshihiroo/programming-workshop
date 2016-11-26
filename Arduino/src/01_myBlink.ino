@@ -8,7 +8,7 @@ void loop() {
 
 void myBlink() {
   digitalWrite(9, HIGH);
-  delay(1000);
+  delay(1000);           // 1,000 millisecond
   digitalWrite(9, LOW);
   delay(1000);
 }
