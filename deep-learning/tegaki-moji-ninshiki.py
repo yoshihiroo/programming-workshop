@@ -5,10 +5,8 @@ def sig(x):
     return 1 / (1 + np.exp(-x))
 
 # Read Test Data
-import sys, os
-sys.path.append(os.pardir)
 import pickle
-from dataset.mnist import load_mnist
+from mnist import load_mnist
 (x_train, label_train), (x_test, label_test) = load_mnist(normalize=False,flatten=True)
 
 # Display Test Data
