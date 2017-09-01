@@ -4,7 +4,7 @@
 
 def xyz(alist):
     length = len(alist)
-    for i in range(length):
+    for i in range(length-1):
         for j in range(length-1-i):
             if alist[j] > alist[j+1]:
                 alist[j], alist[j+1] = alist[j+1], alist[j]
