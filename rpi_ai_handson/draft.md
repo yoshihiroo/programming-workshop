@@ -24,7 +24,7 @@ network={
 
 4. IPアドレスの確認  
 ```
-for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.2.%i && arp -a 192.168.2.%i
+for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i
 arp -a
 ```
 
