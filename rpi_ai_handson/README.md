@@ -3,7 +3,7 @@
 1. 全員
 * [Raspberry Pi 3本体(ケース付き)](https://www.amazon.co.jp/dp/B01CSFZ4JG)
 * [Raspberry Pi用電源セット(5V 3.0A)](https://www.amazon.co.jp/dp/B01N8ZIJL8)
-* [Samsung microSDカード 32GB Class10](https://www.amazon.co.jp/dp/B06XSV23T1)
+* [microSDカード 32GB Class10](https://www.amazon.co.jp/dp/B06XSV23T1)
 * [Raspberry Pi用カメラモジュール](https://www.amazon.co.jp/dp/B00FGKYHXA)
 >Note:
 >それぞれ相当品であれば、アマゾン以外で買うでももちろん可ですが、下記にお気を付けください。
