@@ -27,3 +27,9 @@ network={
 for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.2.%i && arp -a 192.168.2.%i
 arp -a
 ```
+
+5. リモートログイン  
+sshクライアントから上記で調べたIPアドレスにログインする。
+
+6. カメラからの画像配信
+リンク先の[ブログ記事](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)を参照しながら設定を行う。
