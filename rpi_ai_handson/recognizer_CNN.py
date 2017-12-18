@@ -6,7 +6,6 @@ import numpy as np
 from common.layers import *
 from simple_convnet import SimpleConvNet
 from PIL import Image
-import cv2
 
 # 畳み込みネットワークの読み込みと、学習済パラメータの読み込み
 network = SimpleConvNet()
