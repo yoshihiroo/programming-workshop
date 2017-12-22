@@ -24,14 +24,17 @@ network={
 3. Raspberry Piの起動  
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
-4. IPアドレスの確認  
-```
-for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i
-arp -a
-```
+4. IPアドレスの確認  
+同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す。
+下記はWindows上のコマンドプロンプトを使う場合。
+Raspberry PiのMACアドレス`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
+>for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i
+>arp -a
 
-5. リモートログイン  
+5. ssh経由でRaspberry Piにリモートログイン
+クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
 sshクライアントから上記で調べたIPアドレスにログインする。
+
 
 6. OSのモジュールを最新にアップデートする
 ```
