@@ -28,28 +28,50 @@ network={
 同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す。
 下記はWindows上のコマンドプロンプトを使う場合。
 Raspberry PiのMACアドレス`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
->for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i
+>for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i  
 >arp -a
 
 5. ssh経由でRaspberry Piにリモートログイン
 クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
 sshクライアントから上記で調べたIPアドレスにログインする。
 
+6. コンフィグレーション(raspi-config)
+タイムゾーンの設定、およびカメラモジュールの有効化を行う。
+'''
+sudo raspi-config
+'''
+Localisation Options -> Change Timezone -> Asia -> Tokyo
+Interfacing Options -> Camera -> (Would you like the camera...) -> <Yes>
+システムを再起動(reboot)する。
+>Note:  
+>`sudo`を使うことで管理者権限でコマンドが実行されます 
 
-6. OSのモジュールを最新にアップデートする
+カメラ画像の配信
+------------
+1. OSのモジュールを最新にアップデートする
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
+>Note:  
+>何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
 
-7. カメラモジュールを使えるようにする
-'''
-sudo raspi-config
-'''
+2. 配信プログラム(mjpg-streamer)のインストール
+[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)の「配信方法1 - mjpg-streamer」を参照しながら設定を行う。
 
-ラズパイ基本セットアップ
+Linuxの基本操作
 ------------
 
-
-6. カメラからの画像配信
-リンク先の[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ-配信方法1 - mjpg-streamer)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)を参照しながら設定を行う。
+| コマンド | 動き |
+---- | -----
+| whoami | 自分のユーザー名を表示する |
+| who | 現在ログインしているユーザーの一覧を表示する |
+| top | 動いているプロセスの一覧を表示する（qで終了） |
+| pwd | カレントディレクトリのパスを表示する |
+| ls | カレントディレクトリの内容を表示する |
+| cd | 別のディレクトリに移動する |
+| mkdir <ディレクトリ名> | 新しいディレクトリを作成する |
+| cp <ファイル/ディレクトリ名> | ファイルをコピーする |
+| mv <ファイル/ディレクトリ名> | ファイルを移動する |
+| nano <ファイル名> | エディターを開く（Ctrl+xで終了） |
+| less <ファイル名> | ファイルの内容を表示する |
