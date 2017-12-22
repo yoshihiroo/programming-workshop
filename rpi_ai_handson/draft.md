@@ -1,7 +1,9 @@
 ラズパイ基本セットアップ
 ------------
+
 1. OSイメージのダウンロードとSDカードへの書き込み  
 本家Raspberry Piサイトの[インストールガイド](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)を参照しながら進めます。
+
 2. ヘッドレスセットアップのための準備  
 OSイメージが書き込まれたSDカードを、パソコンのSDカードリーダーで開き、ルートディレクトリに中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置きます。
 ```
@@ -31,5 +33,20 @@ arp -a
 5. リモートログイン  
 sshクライアントから上記で調べたIPアドレスにログインする。
 
+6. OSのモジュールを最新にアップデートする
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+7. カメラモジュールを使えるようにする
+'''
+sudo raspi-config
+'''
+
+ラズパイ基本セットアップ
+------------
+
+
 6. カメラからの画像配信
-リンク先の[ブログ記事](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)を参照しながら設定を行う。
+リンク先の[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ-配信方法1 - mjpg-streamer)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)を参照しながら設定を行う。
