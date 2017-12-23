@@ -150,7 +150,20 @@ sudo /etc/init.d/dphys-swapfile restart
 swapon -s
 ```
 
-5. Kerasを用いたサンプルプログラムの実行
+5. Keras動作テスト
+Keras Documentationの[サンプルコード](https://keras.io/applications/)を用いてKerasの動作確認を行う。
+「Classify ImageNet classes with ResNet50」の箇所にあるソースコードをコピーし、`resnet50.py`というファイル名で保存する。
+物体認識のテスト用の画像データをダウンロードする。
+```
+wget https://i1.wp.com/yroy.me/wp-content/uploads/2017/04/elephant.jpeg
+mv elephant.jpeg elephant.jpg
+```
+下記コマンドによりKerasを用いた物体認識を実行する。期待通りの結果が出るか確認する。
+```
+python3 resnet50.py
+```
+
+6. Kerasを用いたサンプルプログラムの実行
 >Note:  
 >`mjpg-streamer`を実行させた状態で`image_classification_resnet50`および`image_classification_mobilenet.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
 - ResNet50
