@@ -11,21 +11,30 @@ from PIL import Image
 network = SimpleConvNet()
 network.load_params("params.pkl")
 
+devnull = open('os.devnull', 'w')
+
 while True:
     time.sleep(1)
 
     # カメラの画像を取り込む
-    subprocess.run(["wget", "-O", "num_photo.jpg", "http://192.168.1.46:9000/?action=snapshot"])
+    subprocess.run(["wget", "-O", "num_photo.jpg", "http://192.168.1.46:9000/?action=snapshot"], stdout=devnull, stderr=subprocess.STDOUT)
 
-    # 画像を28x28に整形
-    img2 = Image.open("num_photo.jpg").convert('L')
-    im = np.array(img2.resize((28,28)))
-    x = np.ravel(im)/255
+    # 画像の前処理（を28x28に整形、白黒対応、二値化）
+    img = Image.open("num_photo.jpg").convert('L')
+    img28 = np.array(img.resize((28,28)))
 
+    thresh = np.median(img28)
+    if thresh > 127:
+        img28 = 255 - img28
+
+    x = np.zeros(img28.shape, img28.dtype)
+    x[np.where(img28 > thresh)] = 255
+
+    x = np.ravel(x)/255
     # 入力値をテキストで出力
     for i in range(0, 28):
         for j in range(0, 28):
-            print("{:02.1f}".format(x[28*i+j]), end=' ')
+            print("{:01.0f}".format(x[28*i+j]), end=' ')
         print('')
 
     # 畳み込みニューラルネットワークで推測させる
