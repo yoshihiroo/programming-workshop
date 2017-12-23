@@ -105,7 +105,7 @@ wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rp
 python3 recognizer_NN.py
 ```
 >Note:  
->`mjpg-streamer`を実行させた状態で`recognizer_NN.py`を実行してください。その際、webサーバーのポート番号を間違えないように注意してください。
+>`mjpg-streamer`を実行させた状態で`recognizer_NN.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
 
 - 畳み込みニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch07`ディレクトリ上で下記コマンドを実行する。
