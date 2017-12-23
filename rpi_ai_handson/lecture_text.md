@@ -37,11 +37,11 @@ sshクライアントから上記で調べたIPアドレスにログインする
 
 6. コンフィグレーション(raspi-config)
 タイムゾーンの設定、およびカメラモジュールの有効化を行う。
-'''
+```
 sudo raspi-config
-'''
-Localisation Options -> Change Timezone -> Asia -> Tokyo
-Interfacing Options -> Camera -> (Would you like the camera...) -> <Yes>
+```
+- Localisation Options -> Change Timezone -> Asia -> Tokyo
+- Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
 システムを再起動(reboot)する。
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
