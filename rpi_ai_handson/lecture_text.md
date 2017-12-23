@@ -82,7 +82,7 @@ MNIST文字認識を実装する
 >Note:  
 >自分がどのディレクトリで作業しているか迷子にならないように、適宜`pwd`コマンドで確認しましょう。
 
-2. ゼロから作るDeep Learningのサンプルコードの入手
+2. 「ゼロから作るDeep Learning」のサンプルコードの入手  
 [O'Reilly社のホームページ](https://www.oreilly.co.jp/books/9784873117584/)からgithubへのリンクを辿る。
 該当するリポジトリの「Clone or download」からリンクをコピーし、`git clone`コマンドで自身のRaspberry Piにクローンを作る。
 ```
@@ -114,3 +114,17 @@ wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rp
 python3 recognizer_CNN.py
 ```
 
+Keras環境の準備
+------------
+1. TensorFlowのインストール
+[ブログ記事(Cross-compiling TensorFlow for the Raspberry Pi)](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/)の中盤の「If you’re running Python 3.5」から始まる箇所のガイドに従ってTensorFlowをインストールする。
+
+2. TensorFlow動作テスト
+```
+wget https://raw.githubusercontent.com/yusugomori/deeplearning-tensorflow-keras/master/3/tensorflow/01_logistic_regression_or_tensorflow.py
+python3 01_logistic_regression_or_tensorflow.py
+```
+が動作することを確認。なお、Python3.4用のTensorFlowのモジュールをPython3.5で使っているためwarningが出る。
+
+>Note:  
+>[「詳解 ディープラーニング TensorFlow・Kerasによる時系列データ処理」](https://book.mynavi.jp/ec/products/detail/id=72995)からのサンプルコードとなります。
