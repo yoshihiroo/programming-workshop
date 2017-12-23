@@ -88,4 +88,17 @@ MNIST文字認識を実装する
 ```
 git clone https://github.com/oreilly-japan/deep-learning-from-scratch.git
 ```
+python3でのコンパイル・実行が正しくできるかテストする。
+```
+cd deep-learning-from-scratch
+cd ch03
+python3 neuralnet_mnist.py
+```
+最初の実行時には`Downloading t10k-labels-idx1-ubyte.gz ...(中略) Creating pickle file ... Done!`と表示される。
+正しく実行されれば、`Accuracy:0.9352`という結果が出力される。
 
+3. カメラ画像認識プログラムの入手
+`/home/pi/deep-learning-from-scratch/ch03`ディレクトリ上で下記コマンドを実行する。
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_NN.py
+```
