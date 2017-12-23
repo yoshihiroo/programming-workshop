@@ -44,7 +44,7 @@ Localisation Options -> Change Timezone -> Asia -> Tokyo
 Interfacing Options -> Camera -> (Would you like the camera...) -> <Yes>
 システムを再起動(reboot)する。
 >Note:  
->`sudo`を使うことで管理者権限でコマンドが実行されます 
+>`sudo`を使うことで管理者権限でコマンドが実行されます。
 
 カメラ画像の配信
 ------------
@@ -75,3 +75,17 @@ Linuxの基本操作
 | mv <ファイル/ディレクトリ名> | ファイルを移動する |
 | nano <ファイル名> | エディターを開く（Ctrl+xで終了） |
 | less <ファイル名> | ファイルの内容を表示する |
+
+MNIST文字認識を実装する
+------------
+1. `cd`コマンドを実行し、自分のホームディレクトリに戻る。
+>Note:  
+>自分がどのディレクトリで作業しているか迷子にならないように、適宜`pwd`コマンドで確認しましょう。
+
+2. ゼロから作るDeep Learningのサンプルコードの入手
+[O'Reilly社のホームページ](https://www.oreilly.co.jp/books/9784873117584/)からgithubへのリンクを辿る。
+該当するリポジトリの「Clone or download」からリンクをコピーし、`git clone`コマンドで自身のRaspberry Piにクローンを作る。
+```
+git clone https://github.com/oreilly-japan/deep-learning-from-scratch.git
+```
+
