@@ -34,7 +34,7 @@ while True:
 
     x = np.ravel(x)/255
     # 入力値をテキストで出力
-        for i in range(0, 28):
+    for i in range(0, 28):
         for j in range(0, 28):
             print("{:01.0f}".format(x[28*i+j]), end=' ')
         print('')
