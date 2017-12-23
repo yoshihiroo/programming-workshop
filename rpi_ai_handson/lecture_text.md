@@ -97,8 +97,20 @@ python3 neuralnet_mnist.py
 最初の実行時には`Downloading t10k-labels-idx1-ubyte.gz ...(中略) Creating pickle file ... Done!`と表示される。
 正しく実行されれば、`Accuracy:0.9352`という結果が出力される。
 
-3. カメラ画像認識プログラムの入手
+3. カメラを使ったMNIST文字認識プログラムの実装
+- ニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch03`ディレクトリ上で下記コマンドを実行する。
 ```
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_NN.py
+python3 recognizer_NN.py
 ```
+>Note:  
+>`mjpg-streamer`を実行させた状態で`recognizer_NN.py`を実行してください。その際、webサーバーのポート番号を間違えないように注意してください。
+
+- 畳み込みニューラルネットワークによる推論
+`/home/pi/deep-learning-from-scratch/ch07`ディレクトリ上で下記コマンドを実行する。
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_CNN.py
+python3 recognizer_CNN.py
+```
+
