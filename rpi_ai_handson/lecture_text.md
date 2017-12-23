@@ -76,7 +76,7 @@ Linuxの基本操作
 | nano <ファイル名> | エディターを開く（Ctrl+xで終了） |
 | less <ファイル名> | ファイルの内容を表示する |
 
-MNIST文字認識を実装する
+MNIST文字認識の実装
 ------------
 1. `cd`コマンドを実行し、自分のホームディレクトリに戻る。
 >Note:  
@@ -98,14 +98,14 @@ python3 neuralnet_mnist.py
 正しく実行されれば、`Accuracy:0.9352`という結果が出力される。
 
 3. カメラを使ったMNIST文字認識プログラムの実装
+>Note:  
+>`mjpg-streamer`を実行させた状態で`recognizer_NN.py`および`recognizer_CNN.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
 - ニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch03`ディレクトリ上で下記コマンドを実行する。
 ```
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_NN.py
 python3 recognizer_NN.py
 ```
->Note:  
->`mjpg-streamer`を実行させた状態で`recognizer_NN.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
 
 - 畳み込みニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch07`ディレクトリ上で下記コマンドを実行する。
@@ -114,7 +114,7 @@ wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rp
 python3 recognizer_CNN.py
 ```
 
-Keras環境の準備
+Kerasによる物体識別の実装
 ------------
 1. TensorFlowのインストール
 [ブログ記事(Cross-compiling TensorFlow for the Raspberry Pi)](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/)の中盤の「If you’re running Python 3.5」から始まる箇所のガイドに従ってTensorFlowをインストールする。
@@ -128,3 +128,38 @@ python3 01_logistic_regression_or_tensorflow.py
 
 >Note:  
 >[「詳解 ディープラーニング TensorFlow・Kerasによる時系列データ処理」](https://book.mynavi.jp/ec/products/detail/id=72995)からのサンプルコードとなります。
+
+3. Kerasのインストール
+下記のコマンドを実行しKerasライブラリと必要なモジュールをインストールする。
+```
+sudo pip3 install keras==2.1.2
+sudo pip3 install scipy
+sudo pip3 install h5py
+sudo apt-get install python-scipy
+sudo apt-get install h5py
+```
+
+4. スワップ領域の拡大
+Kerasの実行時のメモリ不足を避けるために、OSのスワップ領域を増やす。
+```
+sudo nano /etc/dphys-swapfile
+```
+`CONF_SWAPSIZE=100`の箇所の数字を`1024`に変更、ファイルをセーブしてエディタ終了。下記コマンドを実行する。
+```
+sudo /etc/init.d/dphys-swapfile restart
+swapon -s
+```
+
+5. Kerasを用いたサンプルプログラムの実行
+>Note:  
+>`mjpg-streamer`を実行させた状態で`image_classification_resnet50`および`image_classification_mobilenet.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
+- ResNet50
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_resnet50.py
+python3 image_classification_resnet50
+```
+- MobileNet
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_mobilenet.py
+python3 image_classification_mobilenet.py
+```
