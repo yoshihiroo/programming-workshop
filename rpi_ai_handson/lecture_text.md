@@ -163,3 +163,5 @@ python3 image_classification_resnet50
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_mobilenet.py
 python3 image_classification_mobilenet.py
 ```
+>Note:  
+>いずれのプログラムもKeras Documentationの[サンプルコード](https://keras.io/applications/)をもとに修正を加えたものです。
