@@ -24,7 +24,7 @@ while True:
     subprocess.run(["wget", "-O", "photo.jpg", commd], stdout=devnull, stderr=subprocess.STDOUT)
 
     # 画像の前処理（を28x28に整形、白黒対応、二値化）
-    img = Image.open("num_photo.jpg").convert('L')
+    img = Image.open("photo.jpg").convert('L')
     img28 = np.array(img.resize((28,28)))
 
     thresh = np.median(img28)
