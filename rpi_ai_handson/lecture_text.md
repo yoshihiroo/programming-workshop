@@ -165,7 +165,7 @@ python3 resnet50.py
 
 6. Kerasを用いたサンプルプログラムの実行
 >Note:  
->`mjpg-streamer`を実行させた状態で`image_classification_resnet50`および`image_classification_mobilenet.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
+>`mjpg-streamer`を実行させた状態で`image_classification_resnet50`および`image_classification_mobilenet.py`を実行してください。
 - ResNet50
 ```
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_resnet50.py
