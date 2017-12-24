@@ -12,15 +12,17 @@ network = SimpleConvNet()
 network.load_params("params.pkl")
 
 devnull = open('os.devnull', 'w')
+ipaddr = subprocess.check_output(["hostname", "-I"]).decode("utf-8").strip()
+commd = "http://"+ipaddr+":8080/?action=snapshot"
 
 while True:
     time.sleep(1)
 
     # カメラの画像を取り込む
-    subprocess.run(["wget", "-O", "num_photo.jpg", "http://192.168.1.46:9000/?action=snapshot"], stdout=devnull, stderr=subprocess.STDOUT)
+    subprocess.run(["wget", "-O", "photo.jpg", commd], stdout=devnull, stderr=subprocess.STDOUT)
 
     # 画像の前処理（を28x28に整形、白黒対応、二値化）
-    img = Image.open("num_photo.jpg").convert('L')
+    img = Image.open("photo.jpg").convert('L')
     img28 = np.array(img.resize((28,28)))
 
     thresh = np.median(img28)
