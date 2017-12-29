@@ -3,11 +3,17 @@
 ## セキュリティーグループを作成
 TCPポート8888を解放
 
+## 固定IPアドレスの設定
+インスタンス起動時や再起動時にIPアドレスが毎回変わってしまうと不便なので、Elastic IPを使って固定アドレスを取得しておくと良い。
+
 ## AWSインスタンス作成
 - Ubuntu Server 16.04 LTS
 - t2.micro(無償枠)
 - ストレージ30GB
 - セキュリティーグループの設定 先ほど作成したものに紐づけ
+- IPアドレスをElastic IPで設定したものに紐づけ
+
+以下、AWSコンソールにログインした状態で設定を行う。
 
 ## Anacondaパッケージのインストール
 [https://repo.continuum.io/archive/](https://repo.continuum.io/archive/)で最新パージョンを確認。下記の例は`Anaconda3-5.0.0.1-Linux-x86_64`。
@@ -39,9 +45,22 @@ c.NotebookApp.port = 8888
 c.NotebookApp.password = u'sha1:xxxxxxxxxx(ここに先ほどのパスワードを記載)xxxxxxxxxxx'
 ```
 
-## (必要に応じて)Tensorflow, Karasのインストール
+## ワークショップ用のファイルの配置
+ホームディレクトリに`workshop.tar.gz`を解凍する。
 ```
-pip install --upgrade pip
-pip install tensorflow
-pip install keras
+cd
+tar zxvf workshop.tar.gz
 ```
+
+## Jupyter Notebookの起動
+レクチャー用のファイルがあるディレクトリに移動し、jupyterを起動する。
+```
+cd workshop
+cd notebook
+jupyter notebook
+```
+
+コンソールをログインした状態でnotebookを動作させ続けたい場合には、最後の行を下記に置き換える。  
+`nohup jupyter notebook > .nohup.out &`
+
+その場合、Jupyterを終了するには`ps`コマンドで該当するPIDを確認し、`kill`コマンドでプロセスを終了させる。
