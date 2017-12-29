@@ -10,7 +10,7 @@ TCPポート8888を解放
 - セキュリティーグループの設定 先ほど作成したものに紐づけ
 
 ## Anacondaパッケージのインストール
-`[https://repo.continuum.io/archive/](https://repo.continuum.io/archive/)`で最新パージョンを確認。下記の例は`Anaconda3-5.0.0.1-Linux-x86_64`。
+[https://repo.continuum.io/archive/](https://repo.continuum.io/archive/)で最新パージョンを確認。下記の例は`Anaconda3-5.0.0.1-Linux-x86_64`。
 
 ```
 sudo apt update
@@ -26,20 +26,11 @@ source .bashrc
 `jupyter notebook --generate-config`  
 ~/.jupyter/jupyter_notebook_config.pyが作成される
 
-jupyter_notebook_config.pyの先頭に下記を追記  
-```
-c = get_config()
-c.NotebookApp.ip = '0.0.0.0'
-c.NotebookApp.open_browser = False
-c.NotebookApp.port = 8888
-c.NotebookApp.token = ''
-```
-
 ## Jupyter LoginのPassword設定
 以下のコマンドを実行するとPasswordを入れるPromptがでるので、設定したいPasswordを入力する。  
 `python -c "import IPython;print(IPython.lib.passwd())"`
 
-## コンフィグファイルの書き換え
+jupyter_notebook_config.pyの先頭に下記を追記  
 ```
 c = get_config()
 c.NotebookApp.ip = '0.0.0.0'
