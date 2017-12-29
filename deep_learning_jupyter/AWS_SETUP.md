@@ -46,13 +46,14 @@ c.NotebookApp.password = u'sha1:xxxxxxxxxx(ここに先ほどのパスワード�
 ```
 
 ## ワークショップ用のファイルの配置
-ホームディレクトリに`workshop.tar.gz`を解凍する。
+このドキュメントファイルと同じディレクトリにある`workshop.tar.gz`をダウンロードし、AWSのボリュームに転送する。
+ホームディレクトリ上でファイルを解凍する。
 ```
-cd
+cd ~
 tar zxvf workshop.tar.gz
 ```
 
-## Jupyter Notebookの起動
+## Jupyterのプロセスを起動
 レクチャー用のファイルがあるディレクトリに移動し、jupyterを起動する。
 ```
 cd workshop
@@ -64,3 +65,9 @@ jupyter notebook
 `nohup jupyter notebook > .nohup.out &`
 
 その場合、Jupyterを終了するには`ps`コマンドで該当するPIDを確認し、`kill`コマンドでプロセスを終了させる。
+
+## Jupyterへのログイン
+PCのwebブラウザに直接URL(http://<IPアドレス>:8888)を入力し、Jupyter環境にログインする。パスワードを求められるので、上で設定したものを入力する。
+なお、`file3_gakusyu.ipynb`を最初に起動するときに、データフィルをMNISTからダウンロードしてくるので、少し時間がかかる。画面にダウンロードの状況が表示される。
+
+
