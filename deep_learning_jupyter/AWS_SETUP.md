@@ -62,10 +62,7 @@ cd notebook
 jupyter notebook
 ```
 
-コンソールからログオフした状態でnotebookを動作させ続けたい場合には、最後の行を下記に置き換える。 
-`nohup jupyter notebook > .nohup.out &`
-
-その場合、Jupyterを終了するには`ps`コマンドで該当するPIDを確認し、`kill`コマンドでプロセスを終了させる。
+コンソールからログオフした状態でnotebookを動作させ続けたい場合には、最後の行を`nohup jupyter notebook > .nohup.out &`に置き換える。その場合、Jupyterを終了するには`ps`コマンドで該当するPIDを確認し、`kill`コマンドでプロセスを終了させる。
 
 ## Jupyterへのログイン
 PCのwebブラウザに直接URL(http://<IPアドレス>:8888)を入力し、Jupyter環境にログインする。パスワードを求められるので、上で設定したものを入力する。
