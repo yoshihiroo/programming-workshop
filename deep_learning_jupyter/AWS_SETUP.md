@@ -52,6 +52,7 @@ c.NotebookApp.password = u'sha1:xxxxxxxxxx(ここに先ほどのパスワード�
 cd ~
 tar zxvf workshop.tar.gz
 ```
+レクチャー中に誤ってnotebookを削除してしまわないように、`sudo chattr +i <ファイル名>`で削除不可のフラグを立ておくと良い。
 
 ## Jupyterのプロセスを起動
 レクチャー用のファイルがあるディレクトリに移動し、jupyterを起動する。
@@ -61,7 +62,7 @@ cd notebook
 jupyter notebook
 ```
 
-コンソールをログインした状態でnotebookを動作させ続けたい場合には、最後の行を下記に置き換える。  
+コンソールからログオフした状態でnotebookを動作させ続けたい場合には、最後の行を下記に置き換える。 
 `nohup jupyter notebook > .nohup.out &`
 
 その場合、Jupyterを終了するには`ps`コマンドで該当するPIDを確認し、`kill`コマンドでプロセスを終了させる。
