@@ -20,3 +20,15 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 3. すでにラズパイ3をお持ちの方やすでに使われている方  
 * ハンズオン用microSDカード  
 ハンズオンでOSを新規に入れなおしますので、既存のOSやデータを残したい方は各自バックアップを取るか、今回のハンズオン用にmicroSDカードをご用意ください
+
+事前の準備
+-------
+1. ハンズオンに使うツール類のダウンロードとインストール
+ハンズオン当日持参する各自のPCに下記ツールを事前にインストールしておいてください。会社貸与のPC等、セキュリティー対策でインストールをできなくしている場合がありますので、インストール、起動が可能か、事前に確認しておいてください。
+* 解凍ツール -- [7Zip](http://www.7-zip.org/download.html) (Windows) or [The Unarchiver](http://www.7-zip.org/download.html) (Mac)
+* OSイメージ書き込みツール -- [Etcher](https://etcher.io/) (Windows/Mac共通)
+* ターミナルソフト(Windowsの方のみ) -- [Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)、もしくはChromeブラウザーの方は拡張機能[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)でも良い
+
+2. OSイメージのダウンロード
+ファイルの大きさが1.6ギガバイトでダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。
+[RASPBIAN STRETCH WITH DESKTOP(Release date:2017-11-29)](https://downloads.raspberrypi.org/raspbian_latest)
