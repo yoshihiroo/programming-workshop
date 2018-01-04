@@ -30,5 +30,5 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 * ターミナルソフト(Windowsの方のみ) -- [Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)、もしくはChromeブラウザーの方は拡張機能[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)でも良い
 
 2. OSイメージのダウンロード
-ファイルの大きさが1.6ギガバイトでダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。
+ファイルの大きさが1.6ギガバイトでダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。  
 [RASPBIAN STRETCH WITH DESKTOP(Release date:2017-11-29)](https://downloads.raspberrypi.org/raspbian_latest)
