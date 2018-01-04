@@ -181,3 +181,6 @@ python3 image_classification_mobilenet.py
 ```
 >Note:  
 >いずれのプログラムもKeras Documentationの[サンプルコード](https://keras.io/applications/)をもとに修正を加えたものです。
+
+X. このあと
+自宅など他の無線LANに接続する場合は「2. ヘッドレスセットアップのための準備」と同様に、ルートディレクトリに`wpa_supplicant.conf`ファイルを置くことで設定ファイルが上書きされます。
