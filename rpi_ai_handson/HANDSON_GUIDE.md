@@ -53,16 +53,18 @@ echo input | sudo tee /sys/class/leds/led1/trigger
 
 以下、自身のRaspberry Piにログインしなおしてから設定を続ける。
 
-7. コンフィグレーション(raspi-config)
-タイムゾーンの設定、およびカメラモジュールの有効化を行う。
+7. コンフィグレーション(raspi-config)  
+piユーザーのパスワード設定、タイムゾーンの設定、およびカメラモジュールの有効化を行う。
 ```
 sudo raspi-config
 ```
+- Change User Password -> piユーザーのパスワードを変更
 - Localisation Options -> Change Timezone -> Asia -> Tokyo
 - Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
 システムを再起動(reboot)する。
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
+>`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
 
 Linuxの基本操作
 ------------
