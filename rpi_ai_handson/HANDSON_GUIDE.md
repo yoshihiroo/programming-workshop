@@ -151,7 +151,20 @@ sudo pip3 install tensorflow-1.4.0-cp35-none-any.whl
 wget https://raw.githubusercontent.com/yusugomori/deeplearning-tensorflow-keras/master/3/tensorflow/01_logistic_regression_or_tensorflow.py
 python3 01_logistic_regression_or_tensorflow.py
 ```
-が動作することを確認。なお、Python3.4用のTensorFlowのモジュールをPython3.5で使っているためwarningが出る。
+上記コマンドを実行すると、Python3.4用のTensorFlowのモジュールをPython3.5で使っているためwarningが出るが、下記の結果が出力される。
+```
+classified:
+[[ True]
+ [ True]
+ [ True]
+ [ True]]
+
+output probability:
+[[ 0.22355059]
+ [ 0.91425598]
+ [ 0.91425598]
+ [ 0.9974739 ]]
+```
 
 >Note:  
 >[「詳解 ディープラーニング TensorFlow・Kerasによる時系列データ処理」](https://book.mynavi.jp/ec/products/detail/id=72995)からのサンプルコードとなります。
