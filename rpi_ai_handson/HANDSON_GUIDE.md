@@ -28,15 +28,30 @@ network={
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
 4. IPアドレスの確認  
-同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す。
-下記はWindows上のコマンドプロンプトを使う場合。
-Raspberry PiのMACアドレス`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
->for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.X.%i && arp -a 192.168.X.%i  
->arp -a
+同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す(下記はWindows上のコマンドプロンプトを使う場合)。
+Raspberry PiのMACアドレスは`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
+```
+for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.1.%i && arp -a 192.168.1.%i  
+arp -a
+```
+>Note:  
+>`192.168.1`の部分は利用するネットワーク環境に合わせて変更する。
 
 5. ssh経由でRaspberry Piにリモートログイン
 クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
 sshクライアントから上記で調べたIPアドレスにログインする。
+
+6. MACアドレスを確認する  
+複数人で同時にヘッドレスセットアップを行うので、個体の特定が必要となる。下記コマンドでRaspberry Pi本体の赤色LEDを点滅させ、上記4節で調べたIPアドレスと合わせることで本体のMACアドレスを把握することができる。
+```
+echo heartbeat | sudo tee /sys/class/leds/led1/trigger
+```
+特定できたら下記コマンドで元の状態に戻しておく。
+```
+echo input | sudo tee /sys/class/leds/led1/trigger
+```
+
+以下、自身のRaspberry Piにログインしなおしてから設定を続ける。
 
 6. コンフィグレーション(raspi-config)
 タイムゾーンの設定、およびカメラモジュールの有効化を行う。
