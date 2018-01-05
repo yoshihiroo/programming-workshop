@@ -1,13 +1,13 @@
->【注意】以下内容はレクチャー当日までドラフトとなります
+【注意】以下内容はレクチャー当日までドラフトとなります
 
 
-1.ラズパイ基本セットアップ
+ラズパイ基本セットアップ
 ------------
 
-1-1. OSイメージのダウンロードとSDカードへの書き込み  
+1. OSイメージのダウンロードとSDカードへの書き込み  
 本家Raspberry Piサイトの[インストールガイド](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)を参照しながら進めます。
 
-1-2. ヘッドレスセットアップのための準備  
+2. ヘッドレスセットアップのための準備  
 OSイメージが書き込まれたSDカードを、パソコンのSDカードリーダーで開き、ルートディレクトリに中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置きます。
 ```
 country=GB
@@ -24,10 +24,10 @@ network={
 }
 ```
 
-1-3. Raspberry Piの起動  
+3. Raspberry Piの起動  
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
-1-4. IPアドレスの確認  
+4. IPアドレスの確認  
 同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す(下記はWindows上のコマンドプロンプトを使う場合)。
 Raspberry PiのMACアドレスは`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
 ```
@@ -37,11 +37,11 @@ arp -a
 >Note:  
 >`192.168.1`の部分は利用するネットワーク環境に合わせて変更してください。
 
-1-5. ssh経由でRaspberry Piにリモートログイン
+5. ssh経由でRaspberry Piにリモートログイン
 クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
 sshクライアントから上記で調べたIPアドレスにログインする。
 
-1-6. MACアドレスを確認する  
+6. MACアドレスを確認する  
 複数人で同時にヘッドレスセットアップを行うので、個体の特定が必要となる。下記コマンドでRaspberry Pi本体の赤色LEDを点滅させ、上記4節で調べたIPアドレスと合わせることで本体のMACアドレスを把握することができる。
 ```
 echo heartbeat | sudo tee /sys/class/leds/led1/trigger
@@ -53,7 +53,7 @@ echo input | sudo tee /sys/class/leds/led1/trigger
 
 以下、自身のRaspberry Piにログインしなおしてから設定を続ける。
 
-1-7. コンフィグレーション(raspi-config)
+7. コンフィグレーション(raspi-config)
 タイムゾーンの設定、およびカメラモジュールの有効化を行う。
 ```
 sudo raspi-config
@@ -64,7 +64,7 @@ sudo raspi-config
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
 
-2.Linuxの基本操作
+Linuxの基本操作
 ------------
 
 | コマンド | 動き |
