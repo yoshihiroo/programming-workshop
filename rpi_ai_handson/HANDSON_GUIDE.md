@@ -1,13 +1,13 @@
 >【注意】以下内容はレクチャー当日までドラフトとなります
 
 
-ラズパイ基本セットアップ
+1.ラズパイ基本セットアップ
 ------------
 
-1. OSイメージのダウンロードとSDカードへの書き込み  
+1-1. OSイメージのダウンロードとSDカードへの書き込み  
 本家Raspberry Piサイトの[インストールガイド](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)を参照しながら進めます。
 
-2. ヘッドレスセットアップのための準備  
+1-2. ヘッドレスセットアップのための準備  
 OSイメージが書き込まれたSDカードを、パソコンのSDカードリーダーで開き、ルートディレクトリに中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置きます。
 ```
 country=GB
@@ -24,10 +24,10 @@ network={
 }
 ```
 
-3. Raspberry Piの起動  
+1-3. Raspberry Piの起動  
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
-4. IPアドレスの確認  
+1-4. IPアドレスの確認  
 同じネットワークセグメントにつながっているパソコンから下記コマンドでRasperry PiのIPアドレスを探す(下記はWindows上のコマンドプロンプトを使う場合)。
 Raspberry PiのMACアドレスは`B8-27-EB`から始まるので、それらに紐づいているIPアドレスを探す。
 ```
@@ -37,11 +37,11 @@ arp -a
 >Note:  
 >`192.168.1`の部分は利用するネットワーク環境に合わせて変更してください。
 
-5. ssh経由でRaspberry Piにリモートログイン
+1-5. ssh経由でRaspberry Piにリモートログイン
 クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
 sshクライアントから上記で調べたIPアドレスにログインする。
 
-6. MACアドレスを確認する  
+1-6. MACアドレスを確認する  
 複数人で同時にヘッドレスセットアップを行うので、個体の特定が必要となる。下記コマンドでRaspberry Pi本体の赤色LEDを点滅させ、上記4節で調べたIPアドレスと合わせることで本体のMACアドレスを把握することができる。
 ```
 echo heartbeat | sudo tee /sys/class/leds/led1/trigger
@@ -53,7 +53,7 @@ echo input | sudo tee /sys/class/leds/led1/trigger
 
 以下、自身のRaspberry Piにログインしなおしてから設定を続ける。
 
-6. コンフィグレーション(raspi-config)
+1-7. コンフィグレーション(raspi-config)
 タイムゾーンの設定、およびカメラモジュールの有効化を行う。
 ```
 sudo raspi-config
@@ -64,20 +64,7 @@ sudo raspi-config
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
 
-カメラ画像の配信
-------------
-1. OSのモジュールを最新にアップデートする
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
->Note:  
->何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
-
-2. 配信プログラム(mjpg-streamer)のインストール
-[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)の「配信方法1 - mjpg-streamer」を参照しながら設定を行う。
-
-Linuxの基本操作
+2.Linuxの基本操作
 ------------
 
 | コマンド | 動き |
@@ -93,6 +80,19 @@ Linuxの基本操作
 | mv <ファイル/ディレクトリ名> | ファイルを移動する |
 | nano <ファイル名> | エディターを開く（Ctrl+xで終了） |
 | less <ファイル名> | ファイルの内容を表示する |
+
+カメラ画像の配信
+------------
+1. OSのモジュールを最新にアップデートする
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+>Note:  
+>何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
+
+2. 配信プログラム(mjpg-streamer)のインストール
+[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)の「配信方法1 - mjpg-streamer」を参照しながら設定を行う。
 
 MNIST文字認識の実装
 ------------
