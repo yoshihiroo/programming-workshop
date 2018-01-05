@@ -35,7 +35,7 @@ for /l %i in (0,1,255) do ping -w 1 -n 1 192.168.1.%i && arp -a 192.168.1.%i
 arp -a
 ```
 >Note:  
->`192.168.1`の部分は利用するネットワーク環境に合わせて変更する。
+>`192.168.1`の部分は利用するネットワーク環境に合わせて変更してください。
 
 5. ssh経由でRaspberry Piにリモートログイン
 クライアントプログラムは[Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)や、Chromeブラウザーの[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)などがお勧め。
