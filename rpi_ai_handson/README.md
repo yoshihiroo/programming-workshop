@@ -36,7 +36,7 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 3. 起動の確認  
 大まかな手順は、以下の流れになります。
 * ダウンロードしたOSイメージを解凍する
-* Etcherを使ってSDカードにコピーする([参考サイト]http://www.moongift.jp/2017/10/etcher-3ステップで簡単にイメージ書き込み/)
+* Etcherを使ってSDカードにコピーする([参考サイト](http://www.moongift.jp/2017/10/etcher-3ステップで簡単にイメージ書き込み/))
 * OSイメージが入ったSDカードをRaspberry Pi本体に挿し込む
 * Raspberry Pi本体をテレビのHDMIにつなげる
 * Raspberry Pi本体をUSB電源につなぐ
