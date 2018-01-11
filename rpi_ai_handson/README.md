@@ -34,12 +34,15 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 * [RASPBIAN STRETCH WITH DESKTOP(Release date:2017-11-29)](https://downloads.raspberrypi.org/raspbian_latest)
 
 3. 起動の確認  
-大まかな手順は、以下の流れになります。  
-* ダウンロードしたOSイメージをPC上のEtcherを使ってSDカードにコピーする
+大まかな手順は、以下の流れになります。
+* ダウンロードしたOSイメージを解凍する
+* Etcherを使ってSDカードにコピーする([参考サイト]http://www.moongift.jp/2017/10/etcher-3ステップで簡単にイメージ書き込み/)
 * OSイメージが入ったSDカードをRaspberry Pi本体に挿し込む
 * Raspberry Pi本体をテレビのHDMIにつなげる
 * Raspberry Pi本体をUSB電源につなぐ
 
+Raspberry Pi本体には電源スイッチは無く、USB電源アダプターにつなぐとそのまま電源が入ります。
 正常に起動すると、Raspberry Piの電源(赤LED)が点灯し、SDカードのアクセス時に緑LEDが点灯します。
 TVの画面上には、最初に虹色のテスト画像が映ったあと、初回の起動時には自動的に一度だけ再起動がかかります。
 再起動後しばらく待つとGUIデスクトップ画面が映ります。
+OSの起動が確認できたらSDカードのアクセス(緑LED点灯)が落ち着いたところを見計らって電源を抜いてください。
