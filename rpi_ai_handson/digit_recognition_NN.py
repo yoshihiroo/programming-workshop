@@ -15,7 +15,7 @@ b1, b2, b3 = network['b1'], network['b2'], network['b3']
 
 devnull = open('os.devnull', 'w')
 ipaddr = subprocess.check_output(["hostname", "-I"]).decode("utf-8").strip()
-commd = "http://"+ipaddr+":8080/?action=snapshot"
+commd = "http://"+ipaddr+":9000/?action=snapshot"
 
 while True:
     time.sleep(1)
