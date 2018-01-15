@@ -13,7 +13,7 @@ network.load_params("params.pkl")
 
 devnull = open('os.devnull', 'w')
 ipaddr = subprocess.check_output(["hostname", "-I"]).decode("utf-8").strip()
-commd = "http://"+ipaddr+":8080/?action=snapshot"
+commd = "http://"+ipaddr+":9000/?action=snapshot"
 
 while True:
     time.sleep(1)
