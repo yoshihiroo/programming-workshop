@@ -112,7 +112,7 @@ sudo mv mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
 ```
 
 続いて、mjpg-streamer起動スクリプトを作成する。  
-`nano /home/pi/start_stream.sh`と打ってnanoエディタを開き、下記の内容をコピーして保存終了する。
+`nano start_stream.sh`と打ってnanoエディタを開き、下記の内容をコピーして保存終了する。
 ```
 #!/bin/bash
 
@@ -125,9 +125,11 @@ echo "mjpg_streamer started"
 fi
 ```
 
-3. mjpg-streamerの動作確認  
+スクリプトの保存終了後、`chmod 755 start_stream.sh`コマンドで実行フラグを立てておく。
 
-WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
+3. mjpg-streamerの動作確認  
+
+ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
 例：`http://192.168.xx.xx:9000`  
 mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番号を調べて`kill`コマンドで修了させる。
 
