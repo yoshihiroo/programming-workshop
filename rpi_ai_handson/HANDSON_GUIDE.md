@@ -130,6 +130,7 @@ fi
 3. mjpg-streamerの動作確認  
 
 ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
+
 例：`http://192.168.xx.xx:9000`  
 
 mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番号を調べて`kill`コマンドで修了させる。
