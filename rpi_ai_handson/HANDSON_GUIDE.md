@@ -235,7 +235,8 @@ swapon -s
 
 5. Keras動作テスト  
 Keras Documentationの[サンプルコード](https://keras.io/applications/)を用いてKerasの動作確認を行う。
-「Classify ImageNet classes with ResNet50」の箇所にあるソースコードをコピーし、`resnet50.py`というファイル名で保存する。
+「Classify ImageNet classes with ResNet50」の箇所にあるソースコードをコピーし、`resnet50.py`というファイル名で保存する。  
+
 物体認識のテスト用の画像データをダウンロードする。
 ```
 wget https://i1.wp.com/yroy.me/wp-content/uploads/2017/04/elephant.jpeg
