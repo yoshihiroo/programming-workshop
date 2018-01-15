@@ -93,8 +93,41 @@ sudo apt-get upgrade
 >Note:  
 >何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
 
-2. 配信プログラム(mjpg-streamer)のインストール  
-[ブログ記事(Raspberry Pi 3 の標準カメラで撮影した動画をブラウザに配信する方法まとめ)](https://qiita.com/okaxaki/items/72226a0b0f5fab0ec9e9)の「配信方法1 - mjpg-streamer」を参照しながら設定を行う。
+2. 配信プログラム(mjpg-streamer)のインストール  
+下記コマンドを実行し、Pi Cameraがアクティブになっているか確認する。
+```
+vcgencmd get_camera
+```
+正しく動いていれば`supported=1 detected=1`という結果が返ってくる。  
+次に下記コマンドを実行して`mjpg-streamer`をインストールする。
+```
+sudo apt-get install libjpeg9-dev cmake
+sudo git clone https://github.com/jacksonliam/mjpg-streamer.git mjpg-streamer
+cd mjpg-streamer/mjpg-streamer-experimental
+sudo make
+cd
+sudo mv mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
+```
+続いて、mjpg-streamer起動スクリプトを作成する。  
+`nano /home/pi/start_stream.sh`と打ってnanoエディタを開き、下記の内容をコピーして保存終了する。
+```
+#!/bin/bash
+
+if pgrep mjpg_streamer > /dev/null
+then
+echo "mjpg_streamer already running"
+else
+LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" > /dev/null 2>&1&
+echo "mjpg_streamer started"
+fi
+```
+WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
+例：http://192.168.xx.xx:9000  
+mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番号を調べて`kill`コマンドで修了させる。
+
+>Note:  
+>この節の内容は[こちらのブログ記事](https://kitto-yakudatsu.com/archives/2338)を参考にさせてもらいました。
+
 
 MNIST文字認識の実装
 ------------
