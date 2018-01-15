@@ -94,12 +94,14 @@ sudo apt-get upgrade
 >何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
 
 2. 配信プログラム(mjpg-streamer)のインストール  
+
 下記コマンドを実行し、Pi Cameraがアクティブになっているか確認する。
 ```
 vcgencmd get_camera
 ```
 正しく動いていれば`supported=1 detected=1`という結果が返ってくる。  
-次に下記コマンドを実行して`mjpg-streamer`をインストールする。
+
+次に、下記コマンドを実行して`mjpg-streamer`をインストールする。
 ```
 sudo apt-get install libjpeg9-dev cmake
 sudo git clone https://github.com/jacksonliam/mjpg-streamer.git mjpg-streamer
@@ -108,6 +110,7 @@ sudo make
 cd
 sudo mv mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
 ```
+
 続いて、mjpg-streamer起動スクリプトを作成する。  
 `nano /home/pi/start_stream.sh`と打ってnanoエディタを開き、下記の内容をコピーして保存終了する。
 ```
@@ -121,8 +124,11 @@ LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_r
 echo "mjpg_streamer started"
 fi
 ```
+
+3. mjpg-streamerの動作確認  
+
 WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
-例：http://192.168.xx.xx:9000  
+例：`http://192.168.xx.xx:9000`  
 mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番号を調べて`kill`コマンドで修了させる。
 
 >Note:  
