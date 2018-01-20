@@ -218,12 +218,15 @@ output probability:
 3. Kerasのインストール  
 下記のコマンドを実行しKerasライブラリと必要なモジュールをインストールする。
 ```
-sudo pip3 install keras==2.1.2
+sudo pip3 install keras==2.1.3
 sudo pip3 install scipy
 sudo pip3 install h5py
 sudo apt-get install python-scipy
 sudo apt-get install h5py
 ```
+>Note:  
+>TensorFlowと同様にKerasについても最新バージョンを[ウェブサイト](https://pypi.python.org/pypi/Keras)で確認したうえで、上記の`2.1.3`の箇所を変更してください。
+
 
 4. スワップ領域の拡大  
 Kerasの実行時のメモリ不足を避けるために、OSのスワップ領域を増やす。
