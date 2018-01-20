@@ -167,15 +167,15 @@ python3 neuralnet_mnist.py
 - ニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch03`ディレクトリ上で下記コマンドを実行する。
 ```
-wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_NN.py
-python3 recognizer_NN.py
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/digit_recognition_NN.py
+python3 digit_recognition_NN.py
 ```
 
 - 畳み込みニューラルネットワークによる推論
 `/home/pi/deep-learning-from-scratch/ch07`ディレクトリ上で下記コマンドを実行する。
 ```
-wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/recognizer_CNN.py
-python3 recognizer_CNN.py
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/digit_recognition_CNN.py
+python3 digit_recognition_CNN.py
 ```
 
 Kerasによる物体識別の実装
