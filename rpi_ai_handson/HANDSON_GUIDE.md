@@ -60,8 +60,8 @@ sudo raspi-config
 ```
 - Change User Password -> piユーザーのパスワードを変更
 - Localisation Options -> Change Timezone -> Asia -> Tokyo
-- Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
-システムを再起動(reboot)する。
+- Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
+そのあと<Finish>を選び、指示通りにシステム再起動(reboot)する。
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
 >`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
