@@ -223,6 +223,7 @@ sudo pip3 install scipy
 sudo pip3 install h5py
 sudo apt-get install python-scipy
 sudo apt-get install h5py
+sudo pip3 install numpy --upgrade
 ```
 >Note:  
 >TensorFlowと同様にKerasについても最新バージョンを[ウェブサイト](https://pypi.python.org/pypi/Keras)で確認したうえで、上記の`2.1.3`の箇所を変更してください。
