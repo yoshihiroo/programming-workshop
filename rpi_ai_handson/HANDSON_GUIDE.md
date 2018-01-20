@@ -189,6 +189,8 @@ curl -O http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/lastSuccess
 mv tensorflow-1.5.0rc1-cp34-none-any.whl tensorflow-1.5.0rc1-cp35-none-any.whl
 sudo pip3 install tensorflow-1.5.0rc1-cp35-none-any.whl
 ```
+>Note:  
+>上記は2018/1/20時点でのパッケージ名を用いていますが、今後のバージョンアップに伴い適宜パッケージ名を変更してください。[プロジェクトのサイト](http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/)でファイル名を確認できます。
 
 2. TensorFlow動作テスト  
 ```
