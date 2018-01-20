@@ -187,7 +187,7 @@ Kerasによる物体識別の実装
 sudo apt-get install libblas-dev liblapack-dev python-dev libatlas-base-dev gfortran python-setuptools
 curl -O http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/lastSuccessfulBuild/artifact/output-artifacts/tensorflow-1.5.0rc1-cp34-none-any.whl
 mv tensorflow-1.5.0rc1-cp34-none-any.whl tensorflow-1.5.0rc1-cp35-none-any.whl
-sudo pip3 install tensorflow-1.4.0-cp35-none-any.whl
+sudo pip3 install tensorflow-1.5.0rc1-cp35-none-any.whl
 ```
 
 2. TensorFlow動作テスト  
