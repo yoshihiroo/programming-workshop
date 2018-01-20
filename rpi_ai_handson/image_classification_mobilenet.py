@@ -7,7 +7,7 @@ import sys, os, time, subprocess, pickle
 model = MobileNet(weights='imagenet')
 devnull = open('os.devnull', 'w')
 ipaddr = subprocess.check_output(["hostname", "-I"]).decode("utf-8").strip()
-commd = "http://"+ipaddr+":8080/?action=snapshot"
+commd = "http://"+ipaddr+":9000/?action=snapshot"
 
 while True:
     subprocess.run(["wget", "-O", "photo.jpg", commd], stdout=devnull, stderr=subprocess.STDOUT)
