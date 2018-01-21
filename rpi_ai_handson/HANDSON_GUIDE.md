@@ -219,10 +219,11 @@ output probability:
 下記のコマンドを実行しKerasライブラリと必要なモジュールをインストールする。
 ```
 sudo pip3 install keras==2.1.3
+sudo apt-get install python-h5py
+
 sudo pip3 install scipy
 sudo pip3 install h5py
 sudo apt-get install python-scipy
-sudo apt-get install python-h5py
 sudo pip3 install numpy --upgrade  #これいるか不明
 ```
 >Note:  
