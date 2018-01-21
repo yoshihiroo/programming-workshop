@@ -181,7 +181,7 @@ python3 digit_recognition_CNN.py
 Kerasによる物体識別の実装
 ------------
 1. TensorFlowのインストール  
-[ブログ記事(Cross-compiling TensorFlow for the Raspberry Pi)](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/)の中盤の「If you’re running Python 3.5」から始まる箇所のガイドに従ってTensorFlowをインストールする。`pip3`を用いる点に注意。pip3が入っていない場合は`sudo apt-get install python3-pip`でインストールしておく。
+[ブログ記事(Cross-compiling TensorFlow for the Raspberry Pi)](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/)の中盤の「If you’re running Python 3.5」から始まる箇所のガイドに従ってTensorFlowをインストールする。
 
 ```
 sudo apt-get install libblas-dev liblapack-dev python-dev libatlas-base-dev gfortran python-setuptools
