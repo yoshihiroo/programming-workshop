@@ -247,7 +247,7 @@ Keras Documentationの[サンプルコード](https://keras.io/applications/)を
 
 物体認識のテスト用の画像データをダウンロードする。
 ```
-wget https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/elephant.jpg
+wget https://github.com/yoshihiroo/programming-workshop/raw/master/rpi_ai_handson/elephant.jpg
 ```
 下記コマンドによりKerasを用いた物体認識を実行する。期待通りの結果が出るか確認する。
 ```
