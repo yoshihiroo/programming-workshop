@@ -260,7 +260,7 @@ python3 resnet50.py
 - ResNet50
 ```
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_resnet50.py
-python3 image_classification_resnet50
+python3 image_classification_resnet50.py
 ```
 - MobileNet
 ```
