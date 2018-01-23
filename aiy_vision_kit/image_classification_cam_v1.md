@@ -55,9 +55,9 @@ fi
 
 スクリプトの保存終了後、`chmod 755 start_stream.sh`コマンドで実行フラグを立てておく。
 
-3. mjpg-streamerの動作確認  
+- mjpg-streamerの動作確認  
 
-ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
+ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでPi ZeroのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
 
 例：`http://192.168.xx.xx:9000`  
 
