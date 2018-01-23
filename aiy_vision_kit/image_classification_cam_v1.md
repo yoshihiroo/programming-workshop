@@ -8,3 +8,4 @@ Raspberry Pi Zero Wに[Vision Kit](https://aiyprojects.withgoogle.com/vision/)�
 1. セットアップ  
 - [本家サイト](https://aiyprojects.withgoogle.com/vision/)からVision Kit SD Imageをダウンロードし、[Etcher](https://etcher.io/)などのライティングツールを使ってSDカードにイメージファイルを書き込む。
 - 11mm plastic standoffs(スペーサー)を間に挟みながら、40-pinを使ってRaspberry PiとVisionBonnetを結合する。
+ 
