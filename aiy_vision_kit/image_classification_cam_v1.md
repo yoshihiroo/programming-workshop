@@ -11,9 +11,17 @@ Pi Zeroに[Vision Kit](https://aiyprojects.withgoogle.com/vision/)のVisionBonne
 - 11mm plastic standoffs(スペーサー)を間に挟みながら、40-pinを使ってPi ZeroとVisionBonnetを結合する。その際、MIPI flat flex cableによる接続は**しない**
 - カメラモジュール**V1**を**Pi Zero**に接続する
 
-2. ソフトウェア・セットアップ
-- raspi-configによる設定  
-`Interfacing Options`から`Camera -> (Would you like the camera...) -> Yes`を選択し、設定を終了。指示通りシステムを再起動させる。
+2. ソフトウェア・セットアップ  
+- Joy Demo起動の解除
+
+デフォルトではブート後に`Joy Demo application`が自動で起動する設定になっているので、それを解除しておく。
+```
+sudo systemctl stop joy_detection_demo.service
+sudo systemctl disable joy_detection_demo.service
+```
+
+- カメラモジュールの有効化
+raspi-configを立ち上げ、`Interfacing Options`から`Camera -> (Would you like the camera...) -> Yes`を選択し、設定を終了。指示通りシステムを再起動させる。
 
 - OSのモジュールを最新にアップデートする  
 ```
@@ -65,3 +73,12 @@ mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番
 
 >Note:  
 >この節の内容は[こちらのブログ記事](https://kitto-yakudatsu.com/archives/2338)を参考にさせてもらいました。
+
+3. 画像分類の実行
+- virtualenvを起動する
+
+```
+source ~/AIY-projects-python/env/bin/activate
+```
+
+
