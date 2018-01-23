@@ -9,7 +9,7 @@ Pi Zeroに[Vision Kit](https://aiyprojects.withgoogle.com/vision/)のVisionBonne
 - [本家サイト](https://aiyprojects.withgoogle.com/vision/)からVision Kit SD Imageをダウンロードし、[Etcher](https://etcher.io/)などのライティングツールを使ってSDカードにイメージファイルを書き込む
 - SDカードをPi Zeroのスロットに挿入する
 - 11mm plastic standoffs(スペーサー)を間に挟みながら、40-pinを使ってPi ZeroとVisionBonnetを結合する。その際、MIPI flat flex cableによる接続は**しない**
-- カメラモジュールV1をPi Zeroに接続する
+- カメラモジュール**V1**を**Pi Zero**に接続する
 
 2. ソフトウェア・セットアップ
 - raspi-configによる設定  
