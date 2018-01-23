@@ -1,6 +1,8 @@
 Raspberry Pi Zero W + VisionBonnet accessory board + Camera Module Version 1によるカメラ画像分類
 ------------
 
+[![](https://img.youtube.com/vi/-ZhVdgR4h6w/0.jpg)](https://www.youtube.com/watch?v=-ZhVdgR4h6w)
+
 ディープラーニングを使ったカメラ画像認識をRaspberry Pi Zero W(以下Pi Zero)上に実装する。
 Pi Zeroに[Vision Kit](https://aiyprojects.withgoogle.com/vision/)のVisionBonnet accessory boardをにアタッチすることで、ほぼリアルタイムな分類処理を実現する。
 また、Vision Kit組み立てにはカメラモジュールのV2が必要となるが、今回はV1のカメラモジュールを用いて実装を行う。
