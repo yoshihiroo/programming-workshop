@@ -1,4 +1,4 @@
-Image classification by Raspberry Pi Zero W + VisionBonnet accessory board + Camera Camera Module Version 1
+Image classification by Raspberry Pi Zero W + VisionBonnet accessory board + Camera Module Version 1
 ------------
 
 [![](https://img.youtube.com/vi/-ZhVdgR4h6w/0.jpg)](https://www.youtube.com/watch?v=-ZhVdgR4h6w)
