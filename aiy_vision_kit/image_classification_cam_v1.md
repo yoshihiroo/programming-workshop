@@ -81,4 +81,10 @@ mjpg-streamerを終了させたいときは、`ps`コマンドでプロセス番
 source ~/AIY-projects-python/env/bin/activate
 ```
 
+- `mjpg-streamer`を実行させた状態で、下記を実行し`image_classification`を実行する
+
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_resnet50.py
+python3 image_classification_resnet50.py
+```
 
