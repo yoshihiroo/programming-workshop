@@ -58,7 +58,7 @@ if pgrep mjpg_streamer > /dev/null
 then
 echo "mjpg_streamer already running"
 else
-LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" > /dev/null 2>&1&
+LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 256 -y 256" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" > /dev/null 2>&1&
 echo "mjpg_streamer started"
 fi
 ```
@@ -82,9 +82,9 @@ To stop mjpg-streamer, check the process number with the `ps` command and `kill`
 source ~/AIY-projects-python/env/bin/activate
 ```
 
-- With `mjpg-streamer` running, execute the following to run `image_classification`
+- With `mjpg-streamer` running, execute the following to run `image_classification_cam_v1.py`
 
 ```
-wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_resnet50.py
-python3 image_classification_resnet50.py
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/aiy_vision_kit/image_classification_cam_v1.py
+python3 image_classification_cam_v1.py
 ```
