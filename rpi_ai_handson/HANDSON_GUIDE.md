@@ -5,10 +5,10 @@
 ------------
 
 1. OSイメージのダウンロードとSDカードへの書き込み  
-本家Raspberry Piサイトの[インストールガイド](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)を参照しながら進めます。
+本家Raspberry Piサイトの[インストールガイド](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)を参照しながら進める。
 
 2. ヘッドレスセットアップのための準備  
-OSイメージが書き込まれたSDカードを、パソコンのSDカードリーダーで開き、`/boot`ディレクトリに中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置きます。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。
+OSイメージが書き込まれたSDカードを、パソコンのSDカードリーダーで開き、`/boot`ディレクトリに中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置く。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。
 ```
 country=GB
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
