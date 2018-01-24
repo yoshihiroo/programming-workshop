@@ -5,7 +5,7 @@ Image classification by Raspberry Pi Zero W + VisionBonnet accessory board + Cam
 
 Implement camera image recognition using deep learning on Raspberry Pi Zero W (Pi Zero).
 By attaching VisionBonnet accessory board of [Vision Kit](https://aiyprojects.withgoogle.com/vision/) to Pi Zero, almost real time classification processing is realized.
-Officially, Camera Module V2 is required for assembling the Vision Kit, but this time by manually installing necessory programs, I implemented it using Camera Module V1.
+Officially, Camera Module V2 is required for assembling the Vision Kit, but this time by manually installing necessary programs, I implemented it using Camera Module V1.
 
 1. Hardware Setup
 - Download Vision Kit SD Image from [Vision Kit web site](https://aiyprojects.withgoogle.com/vision/) and use the writing tool such as [Etcher](https://etcher.io/) to write image file to SD card.
