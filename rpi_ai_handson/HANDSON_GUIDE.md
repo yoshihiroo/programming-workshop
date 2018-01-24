@@ -285,7 +285,7 @@ sudo apt-get update
 sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
 ```
 加えて、`sudo raspi-config`から、
-- Interfacing Options -> VNC -> (Would you like the VNC...) -> Yes
+Interfacing Options -> VNC -> (Would you like the VNC...) -> Yes
 の設定を行う。
 
 クライアント側には[VNC Viewer](https://www.realvnc.com/download/viewer/)をダウンロード、インストールする。
