@@ -270,5 +270,23 @@ python3 image_classification_mobilenet.py
 >Note:  
 >いずれのプログラムもKeras Documentationの[サンプルコード](https://keras.io/applications/)をもとに修正を加えたものです。
 
-X. このあと  
-自宅など他の無線LANに接続する場合は「2. ヘッドレスセットアップのための準備」と同様に、ルートディレクトリに`wpa_supplicant.conf`ファイルを置くことで設定ファイルが上書きされます。
+(オプション)その他の設定
+------------
+1. 別の無線LANへの接続 
+
+自宅など他の無線LANに接続する場合は「2. ヘッドレスセットアップのための準備」と同様に、ルートディレクトリに`wpa_supplicant.conf`ファイルを置くことで設定ファイルが上書きされる。
+
+2. VNCの設定 
+
+VNCを使うと、リモートからデスクトップ環境を使うことができる。
+全体の流れはRaspberry Piサイトの[ドキュメント](https://www.raspberrypi.org/documentation/remote-access/vnc/)を参照のこと。
+
+クライアント側には[VNC Viewer](https://www.realvnc.com/download/viewer/)をダウンロード、インストールする。
+
+デフォルトではリモート(Raspberry Pi)側の画面が狭いので、`/boot/config.txt`の下記箇所をコメントアウトを外し変更を保存、Raspberry Piを再起動させる。
+```
+framebuffer_width=1280
+framebuffer_height=720
+```
+
+再起動後、VNC ViewerからRaspberry PiのIPアドレスを指定しログインを行うと、デスクトップ画面が表示される。
