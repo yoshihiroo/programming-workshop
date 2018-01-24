@@ -279,8 +279,15 @@ python3 image_classification_mobilenet.py
 2. VNCの設定 
 
 VNCを使うと、リモートからデスクトップ環境を使うことができる。
-
 全体の流れはRaspberry Piサイトの[ドキュメント](https://www.raspberrypi.org/documentation/remote-access/vnc/)を参照のこと。
+```
+sudo apt-get update
+sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+```
+加えて、`sudo raspi-config`から、
+- Interfacing Options -> VNC -> (Would you like the VNC...) -> Yes
+の設定を行う。
+
 クライアント側には[VNC Viewer](https://www.realvnc.com/download/viewer/)をダウンロード、インストールする。
 
 デフォルトではリモート(Raspberry Pi)側の画面が狭いので、`/boot/config.txt`の下記箇所をコメントアウトを外し変更を保存、Raspberry Piを再起動させる。
