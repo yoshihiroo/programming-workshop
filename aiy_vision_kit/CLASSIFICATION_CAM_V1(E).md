@@ -65,11 +65,11 @@ echo "mjpg_streamer started"
 fi
 ```
 
-After saving the script, set the execution flag with `chmod 755 start_stream.sh` command.
+After saving the script, add the executable flag by `chmod 755 start_stream.sh` command.
 
 - Check operation of mjpg-streamer  
 
-After typing `. /start_stream.sh` on the home directory, after starting mjpg-streamer, you can see the broadcasted image from the camera by accessing Pi Zero's IP address, port 9000 by the web browser.
+After typing `./start_stream.sh` on the home directory, after starting mjpg-streamer, you can see the broadcasted image from the camera by accessing Pi Zero's IP address, port 9000 by the web browser.
   
 
 例：`http://192.168.xx.xx:9000`  
@@ -84,7 +84,7 @@ To stop mjpg-streamer, check the process number with the `ps` command and `kill`
 source ~/AIY-projects-python/env/bin/activate
 ```
 
-- With `mjpg-streamer` running, execute the following to run `image_classification_cam_v1.py`
+- While `mjpg-streamer` running, execute the following to run `image_classification_cam_v1.py`
 
 ```
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/aiy_vision_kit/image_classification_cam_v1.py
