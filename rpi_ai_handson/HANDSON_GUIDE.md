@@ -221,10 +221,7 @@ output probability:
 sudo pip3 install keras==2.1.3
 sudo pip3 install h5py
 sudo apt-get install python-h5py
-sudo pip3 install numpy --upgrade  #これいるか不明
-
-#sudo pip3 install scipy
-#sudo apt-get install python-scipy
+sudo pip3 install numpy --upgrade
 ```
 >Note:  
 >TensorFlowと同様にKerasについても最新バージョンを[ウェブサイト](https://pypi.python.org/pypi/Keras)で確認したうえで、上記の`2.1.3`の箇所を変更してください。
@@ -250,6 +247,7 @@ Keras Documentationの[サンプルコード](https://keras.io/applications/)を
 wget https://github.com/yoshihiroo/programming-workshop/raw/master/rpi_ai_handson/elephant.jpg
 ```
 下記コマンドによりKerasを用いた物体認識を実行する。期待通りの結果が出るか確認する。
+最初の実行時には`Downloading data from..`のメッセージとともにh5ファイルとjsonファイルがダウンロードされる。
 ```
 python3 resnet50.py
 ```
