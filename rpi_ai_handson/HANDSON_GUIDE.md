@@ -279,7 +279,6 @@ python3 image_classification_mobilenet.py
 VNCを使うと、リモートからデスクトップ環境を使うことができる。
 全体の流れはRaspberry Piサイトの[ドキュメント](https://www.raspberrypi.org/documentation/remote-access/vnc/)を参照のこと。
 ```
-sudo apt-get update
 sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
 ```
 加えて、`sudo raspi-config`から、
