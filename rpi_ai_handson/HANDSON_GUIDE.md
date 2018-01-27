@@ -290,3 +290,6 @@ framebuffer_width=1280
 framebuffer_height=720
 ```
 再起動後、VNC ViewerからRaspberry PiのIPアドレスを指定しログインを行うと、デスクトップ画面が表示される。
+
+-----
+参照した外部情報は[References](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/REFERENCES.md)にまとめました
