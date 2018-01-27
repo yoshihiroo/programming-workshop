@@ -8,4 +8,5 @@
 | [deep-learning](https://github.com/yoshihiroo/programming-workshop/tree/master/deep-learning) | cloud9環境を使ったPython deep learning入門 | 2017/5/28 |
 | [deep_learning_jupyter](https://github.com/yoshihiroo/programming-workshop/tree/master/deep_learning_jupyter) | Jupyter環境を使ったPython deep learning入門 | 2017/12/2 |
 | [infrastructure](https://github.com/yoshihiroo/programming-workshop/tree/master/infrastructure) | サーバー・仮想化・クラウド入門 | 2017/9/10 |
-| [rpi_ai_handson](https://github.com/yoshihiroo/programming-workshop/tree/master/rpi_ai_handson) | Raspberry Piによるdeep learning実装 | 2018/1/27予定 |
+| [rpi_ai_handson](https://github.com/yoshihiroo/programming-workshop/tree/master/rpi_ai_handson) | Raspberry Piによるdeep learning実装 | 2018/1/27 |
+| [aiy_vision_kit](https://github.com/yoshihiroo/programming-workshop/tree/master/aiy_vision_kit) | Google AIY Vision Kitを使ったAI実装 |  |
