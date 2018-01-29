@@ -27,7 +27,7 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 4. Raspberry Piの起動  
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
-5. Wifi設定  
+5. Wifi設定  
 `/etc/wpa_supplicant/wpa_supplicant.conf`をエディターで開き下記のように変更する。  
 ```
 country=GB
