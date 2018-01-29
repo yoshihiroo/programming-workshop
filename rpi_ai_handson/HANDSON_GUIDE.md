@@ -10,11 +10,14 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 2. USB-シリアルケーブルの接続  
 
 4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)。
+
+>Note:  
+>シリアルケーブル赤色のPINはどこにも刺しません。
+>また、ラズパイ本体の2番と4番ピン(5V PWR)からは5V電圧が出ていますので、くれぐれも誤ってケーブルを刺さないよう注意してください。
+
 * 6 GND -- 黒
 * 8 TX -- 白
 * 10 RX -- 緑 
-
-注意：赤はどこにも刺さない。
 
 ケーブルのUSBコネクターをPCのUSBポートに接続する。
 
