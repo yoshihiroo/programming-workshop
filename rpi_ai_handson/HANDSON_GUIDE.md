@@ -42,6 +42,13 @@ network={
 
 `/etc/init.d/networking restart`コマンド実行によってWiFiに接続される。
 
+6. raspi-config設定  
+sshを有効にする。
+```
+sudo raspi-config
+```
+- Interfacing Options -> SSH -> (Would you like the SSH...) -> Yes  
+
 
 ラズパイのヘッドレスセットアップ (b)無線LAN接続を用いる方法
 ------------
