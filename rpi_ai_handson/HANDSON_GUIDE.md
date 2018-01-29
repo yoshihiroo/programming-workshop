@@ -8,6 +8,7 @@
 OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot`ドライブ直下の`config.txt`の最後尾に`enable_uart=1`という行を追記する。
 
 2. USB-シリアルケーブルの接続  
+
 ケーブルのUSBコネクターをPCのUSBポートに接続し、4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)。
 * 6 GND -- 黒
 * 8 TX -- 白
