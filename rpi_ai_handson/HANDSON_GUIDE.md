@@ -42,7 +42,7 @@ network={
 >(a)USB-シリアルケーブルを使う方法がうまくいかない場合、この(b)の方法をとってください
 
 1. ヘッドレスセットアップのための準備  
-OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot'ドライブ直下に中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置く。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。
+OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot`ドライブ直下に中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置く。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。
 ```
 country=GB
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
