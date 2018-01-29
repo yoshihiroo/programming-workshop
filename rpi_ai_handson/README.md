@@ -13,6 +13,7 @@
 * [Raspberry Pi用電源セット(5V 3.0A)](https://www.amazon.co.jp/dp/B01N8ZIJL8)
 * [microSDカード 32GB Class10](https://www.amazon.co.jp/dp/B06XSV23T1)
 * [Raspberry Pi用カメラモジュール](https://www.amazon.co.jp/dp/B00FGKYHXA)  
+* [USB-シリアル変換ケーブル](https://www.amazon.co.jp/dp/B00K7YYFNM)
 
 >Note:  
 >それぞれ相当品であれば、アマゾン以外で買うでももちろん可ですが、下記にお気を付けください。
@@ -36,6 +37,7 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 * 解凍ツール -- [7Zip](http://www.7-zip.org/download.html) (Windows) or [The Unarchiver](http://www.7-zip.org/download.html) (Mac)
 * OSイメージ書き込みツール -- [Etcher](https://etcher.io/) (Windows/Mac共通)
 * ターミナルソフト(Windowsの方のみ) -- [Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)、もしくはChromeブラウザーの方は拡張機能[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)でも良い
+* USB-シリアル変換ケーブル用ドライバー -- ケーブルが手元に届いたら[Prolific USB To Serial Driver "Code 10" Fix](http://www.ifamilysoftware.com/news37.html)を参照しながらWindows 64bitか32bitに気を付けながら指示通りにセットアップを行ってください
 
 2. OSイメージのダウンロード  
 ファイルの大きさが数ギガバイトあり、ダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。  
