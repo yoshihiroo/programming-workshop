@@ -28,7 +28,7 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
 5. Wifi設定  
-`/etc/wpa_supplicant/wpa_supplicant.conf`をエディターで開き下記のように変更する。  
+`sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`コマンドでエディターを開き、下記の内容に変更する。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。 
 ```
 country=GB
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -40,7 +40,7 @@ network={
 }
 ```
 
-`/etc/init.d/networking restart`コマンド実行によってWiFiに接続される。
+`sudo /etc/init.d/networking restart`コマンド実行によってWiFiに接続される。
 
 6. raspi-config設定  
 sshを有効にする。
