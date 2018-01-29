@@ -50,19 +50,7 @@ echo input | sudo tee /sys/class/leds/led1/trigger
 
 以下、自身のRaspberry Piにログインしなおしてから設定を続ける。
 
-7. コンフィグレーション(raspi-config)  
-piユーザーのパスワード設定、タイムゾーンの設定、およびカメラモジュールの有効化を行う。
-```
-sudo raspi-config
-```
-- Change User Password -> piユーザーのパスワードを変更
-- Localisation Options -> Change Timezone -> Asia -> Tokyo
-- Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
 
-そのあとFinishを選び、指示通りにシステム再起動(reboot)する。
->Note:  
->`sudo`を使うことで管理者権限でコマンドが実行されます。
->`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
 
 Linuxの基本操作
 ------------
@@ -83,7 +71,21 @@ Linuxの基本操作
 
 カメラ画像の配信
 ------------
-1. OSのモジュールを最新にアップデートする  
+1. raspi-config設定  
+piユーザーのパスワード設定、タイムゾーンの設定、およびカメラモジュールの有効化を行う。
+```
+sudo raspi-config
+```
+- Change User Password -> piユーザーのパスワードを変更
+- Localisation Options -> Change Timezone -> Asia -> Tokyo
+- Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
+
+そのあとFinishを選び、指示通りにシステム再起動(reboot)する。
+>Note:  
+>`sudo`を使うことで管理者権限でコマンドが実行されます。
+>`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
+
+2. OSのモジュールを最新にアップデートする  
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -91,7 +93,7 @@ sudo apt-get upgrade
 >Note:  
 >何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
 
-2. 配信プログラム(mjpg-streamer)のインストール  
+3. 配信プログラム(mjpg-streamer)のインストール  
 
 下記コマンドを実行し、Pi Cameraがアクティブになっているか確認する。
 ```
@@ -125,7 +127,7 @@ fi
 
 スクリプトの保存終了後、`chmod 755 start_stream.sh`コマンドで実行フラグを立てておく。
 
-3. mjpg-streamerの動作確認  
+4. mjpg-streamerの動作確認  
 
 ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
 
