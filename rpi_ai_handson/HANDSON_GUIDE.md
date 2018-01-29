@@ -42,8 +42,8 @@ network={
 
 `sudo restart`コマンドで再起動するとWiFiに接続される。
 
-6. raspi-config設定  
-sshを有効にする。
+6. raspi-config設定  
+sshを有効にすることで、ネットワーク経由でログインすることができる。
 ```
 sudo raspi-config
 ```
@@ -118,8 +118,7 @@ Linuxの基本操作
 
 カメラ画像の配信
 ------------
-1. raspi-config設定  
-
+1. raspi-config設定  
 piユーザーのパスワード設定、タイムゾーンの設定、およびカメラモジュールの有効化を行う。
 ```
 sudo raspi-config
@@ -141,8 +140,7 @@ sudo apt-get upgrade
 >Note:  
 >何らかプログラムをインストールする際には、上の二つのコマンドを実行し、事前にOSのモジュールを最新の状態にすることをお勧めします。 
 
-3. 配信プログラム(mjpg-streamer)のインストール  
-
+3. 配信プログラム(mjpg-streamer)のインストール  
 下記コマンドを実行し、Pi Cameraがアクティブになっているか確認する。
 ```
 vcgencmd get_camera
@@ -175,8 +173,7 @@ fi
 
 スクリプトの保存終了後、`chmod 755 start_stream.sh`コマンドで実行フラグを立てておく。
 
-4. mjpg-streamerの動作確認  
-
+4. mjpg-streamerの動作確認  
 ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
 
 例：`http://192.168.xx.xx:9000`  
@@ -317,12 +314,10 @@ python3 image_classification_mobilenet.py
 
 (オプション)その他の設定
 ------------
-1. 別の無線LANへの接続 
-
+1. 別の無線LANへの接続  
 自宅など他の無線LANに接続する場合は「2. ヘッドレスセットアップのための準備」と同様に、ルートディレクトリに`wpa_supplicant.conf`ファイルを置くことで設定ファイルが上書きされる。
 
-2. VNCの設定 
-
+2. VNCの設定  
 VNCを使うと、リモートからデスクトップ環境を使うことができる。
 全体の流れはRaspberry Piサイトの[ドキュメント](https://www.raspberrypi.org/documentation/remote-access/vnc/)を参照のこと。
 ```
