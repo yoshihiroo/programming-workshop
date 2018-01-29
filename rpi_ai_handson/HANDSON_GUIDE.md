@@ -9,12 +9,14 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 
 2. USB-シリアルケーブルの接続  
 
-ケーブルのUSBコネクターをPCのUSBポートに接続し、4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)。
+4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)。
 * 6 GND -- 黒
 * 8 TX -- 白
 * 10 RX -- 緑 
 
 注意：赤はどこにも刺さない。
+
+ケーブルのUSBコネクターをPCのUSBポートに接続する。
 
 3. PC側でターミナルソフトを開き、シリアル通信のボーレートを115200に設定する。
 
