@@ -1,7 +1,43 @@
+以下の内容はハンズオン当日までドラフトとなります。
+
+
 ラズパイのヘッドレスセットアップ (a)USB-シリアルケーブルを使う方法
 ------------
-1. ヘッドレスセットアップのための準備  
+1. ヘッドレスセットアップのための準備
+
 OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot`ドライブ直下の`config.txt`の最後尾に`enable_uart=1`という行を追記する。
+
+2. USB-シリアルケーブルの接続  
+ケーブルのUSBコネクターをPCのUSBポートに接続し、4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)。
+* 6 GND -- 黒
+* 8 TX -- 白
+* 10 RX -- 緑 
+
+注意：赤はどこにも刺さない。
+
+3. PC側でターミナルソフトを開き、シリアル通信のボーレートを115200に設定する。
+
+4. Raspberry Piの起動  
+パソコンからSDカードを取り出し、RPi本体に入れて起動する。
+
+5. Wifi設定  
+`/etc/wpa_supplicant/wpa_supplicant.conf`をエディターで開き下記のように変更する。
+```
+country=GB
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+        ssid="<SSID名>"
+        psk="<パスワード>"
+        key_mgmt=WPA-PSK
+        proto=RSN
+        pairwise=CCMP
+        auth_alg=OPEN
+}
+```
+
+`/etc/init.d/networking restart`コマンド実行によってWiFiに接続される。
 
 
 ラズパイのヘッドレスセットアップ (b)無線LAN接続を用いる方法
