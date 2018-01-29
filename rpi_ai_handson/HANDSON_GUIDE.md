@@ -30,10 +30,6 @@ update_config=1
 network={
         ssid="<SSID名>"
         psk="<パスワード>"
-        key_mgmt=WPA-PSK
-        proto=RSN
-        pairwise=CCMP
-        auth_alg=OPEN
 }
 ```
 
@@ -55,10 +51,6 @@ update_config=1
 network={
         ssid="<SSID名>"
         psk="<パスワード>"
-        key_mgmt=WPA-PSK
-        proto=RSN
-        pairwise=CCMP
-        auth_alg=OPEN
 }
 ```
 
