@@ -3,12 +3,10 @@
 
 ラズパイのヘッドレスセットアップ (a)USB-シリアルケーブルを使う方法
 ------------
-1. SDカード上のファイルの編集
-
+1. SDカード上のファイルの編集  
 OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot`ドライブ直下の`config.txt`の最後尾に`enable_uart=1`という行を追記する。
 
-2. USB-シリアルケーブルの接続
-
+2. USB-シリアルケーブルの接続  
 * 4色のコネクターを[PIN配置の図](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi)を参照しながら下記の通り接続する(右上付近のPIN)
 
 >** **注意！** ** ラズパイ本体の2番と4番ピン(5V PWR)からは5V電圧が出ていますので、くれぐれも誤ってケーブルを刺さないよう注意してください。
@@ -23,16 +21,14 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 * ケーブルのUSBコネクターをPCのUSBポートに接続する。
 
 3. ターミナル接続  
-
 * デバイスマネージャーで接続されているポート番号を確認する
 * PC上のターミナルソフトを開き、シリアル通信のポート番号を選択、ボーレートを115200に設定する
 
 4. Raspberry Piの起動  
-
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
 5. Wifi設定  
-`/etc/wpa_supplicant/wpa_supplicant.conf`をエディターで開き下記のように変更する。
+`/etc/wpa_supplicant/wpa_supplicant.conf`をエディターで開き下記のように変更する。  
 ```
 country=GB
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
