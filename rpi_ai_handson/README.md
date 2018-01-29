@@ -1,7 +1,7 @@
 | ドキュメント | 内容 |
 ----|----
 | [README.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/README.md) | 当ドキュメント。機材購入ガイド、事前の準備 |
-| [HANDSON_GUIDE.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/HANDSON_GUIDE.md) | ハンズオンガイド。実装の詳細なステップ |
+| [HANDSON_GUIDE.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/HANDSON_GUIDE.md) | ハンズオン当日に使うガイド。実装の詳細なステップ |
 | [REFERENCES.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/REFERENCES.md) | ガイド作成にあたって参考にした外部情報、リンク |
 
 ----
@@ -55,6 +55,3 @@ Raspberry Pi本体には電源スイッチは無く、USB電源アダプター�
 再起動後しばらく待つとGUIデスクトップ画面が映ります。OSの起動が確認できたらSDカードのアクセス(緑LED点灯)が落ち着いたところを見計らって電源を抜いてください。  
 
 もしテレビへのHDMI接続が難しい方は、Raspberry Pi本体をUSB電源につなぎ、通電のみでも確認しておいてください。電源の赤LED、SDカードアクセスの緑LEDが点灯します。テレビがない場合は起動の状態が目視できませんが、SDカードへのアクセスが落ち着くまで2、3分待ってから、電源を抜いてください。
-
------
-以下、[ハンズオンガイド](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/HANDSON_GUIDE.md)に続く
