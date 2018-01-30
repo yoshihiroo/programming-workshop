@@ -27,33 +27,23 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 4. Raspberry Piの起動  
 パソコンからSDカードを取り出し、RPi本体に入れて起動する。
 
-5. WiFi設定  
-`sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`コマンドでエディターを開き、下記の内容に変更する。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。 
-```
-country=GB
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-        ssid="<SSID名>"
-        psk="<パスワード>"
-}
-```
-
-`sudo restart`コマンドで再起動するとWiFiに接続される。
-
-6. raspi-config設定  
-sshを有効にすることで、ネットワーク経由でログインすることができる。
-```
-sudo raspi-config
-```
+5. raspi-config設定  
+`sudo raspi-config`コマンドで設定画面に入り、以下の設定を行う。
+- Change User Password -> piユーザーのパスワードを変更
+- Network Options -> Wi-fi -> 無線LANのSSID/passphraseを設定
 - Interfacing Options -> SSH -> (Would you like the SSH...) -> Yes  
+- Localisation Options -> Change Timezone -> Asia -> Tokyo
 
+必要に応じて再起動する。
+
+>Note:  
+>`sudo`を使うことで管理者権限でコマンドが実行されます。
+>`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
 
 ラズパイのヘッドレスセットアップ (b)無線LAN接続を用いる方法
 ------------
 >Note:  
->(a)USB-シリアルケーブルを使う方法がうまくいかない場合、この(b)の方法をとってください
+>上記の「(a)USB-シリアルケーブルを使う方法」がうまくいかない場合は、この(b)の方法をとってください
 
 1. ヘッドレスセットアップのための準備  
 OSイメージが書き込まれたSDカードをパソコンのSDカードリーダーで開き、`boot`ドライブ直下に中身が空の`ssh`ファイルと、下記の内容の`wpa_supplicant.conf`ファイルを置く。使用する無線LAN環境に合わせてSSID名とパスワードの箇所を変える。
@@ -118,19 +108,9 @@ Linuxの基本操作
 
 カメラ画像の配信
 ------------
-1. raspi-config設定  
-piユーザーのパスワード設定、タイムゾーンの設定、およびカメラモジュールの有効化を行う。
-```
-sudo raspi-config
-```
-- Change User Password -> piユーザーのパスワードを変更
-- Localisation Options -> Change Timezone -> Asia -> Tokyo
+1. カメラモジュールの有効化  
+`sudo raspi-config`で設定画面に入り、下記設定によってカメラモジュールの有効化を行い、指示通りにシステム再起動(reboot）する。
 - Interfacing Options -> Camera -> (Would you like the camera...) -> Yes  
-
-そのあとFinishを選び、指示通りにシステム再起動(reboot)する。
->Note:  
->`sudo`を使うことで管理者権限でコマンドが実行されます。
->`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
 
 2. OSのモジュールを最新にアップデートする  
 ```
