@@ -151,6 +151,9 @@ fi
 
 スクリプトの保存終了後、`chmod 755 start_stream.sh`コマンドで実行フラグを立てておく。
 
+>Note:  
+>`mjpg_streamer`のオプションについては[作者のGitHub](https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/input_raspicam/README.md)に詳細な説明があります。例えば画像のコントラストを上げたい場合は、上記コマンドの該当箇所に`-co 50`と追記します。～input_raspicam.so **-co 50** -fps 10 -q 50 -x 320 -y 240～
+
 4. mjpg-streamerの動作確認  
 ホームディレクトリ上で`./start_stream.sh`と打ち、mjpg-streamerを起動させたのち、WebブラウザでRaspberry PiのIPアドレス、ポート9000番にアクセスすることでカメラからの配信画像が見れる。  
 
