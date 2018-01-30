@@ -185,7 +185,7 @@ python3 neuralnet_mnist.py
 
 3. カメラを使ったMNIST文字認識プログラムの実装  
 >Note:  
->`mjpg-streamer`を実行させた状態で`recognizer_NN.py`および`recognizer_CNN.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
+>`mjpg-streamer`を実行させた状態で`recognizer_NN.py`および`recognizer_CNN.py`を実行してください。
 - ニューラルネットワークによる推論
 ```
 cd /home/pi/deep-learning-from-scratch/ch03
