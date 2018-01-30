@@ -34,8 +34,6 @@ OSイメージが書き込まれたSDカードをパソコンのSDカードリ�
 - Interfacing Options -> SSH -> (Would you like the SSH...) -> Yes  
 - Localisation Options -> Change Timezone -> Asia -> Tokyo
 
-必要に応じて再起動する。
-
 >Note:  
 >`sudo`を使うことで管理者権限でコマンドが実行されます。
 >`pi`ユーザーはRaspberry Piのデフォルトユーザーなので、セキュリティー対策上、パスワードを変更してから作業をするようにしましょう。
