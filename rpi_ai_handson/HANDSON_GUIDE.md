@@ -187,15 +187,15 @@ python3 neuralnet_mnist.py
 >Note:  
 >`mjpg-streamer`を実行させた状態で`recognizer_NN.py`および`recognizer_CNN.py`を実行してください。ソースコード内のIPアドレスおよびwebサーバーのポート番号を自分の環境に合わせて変更してください。
 - ニューラルネットワークによる推論
-`/home/pi/deep-learning-from-scratch/ch03`ディレクトリ上で下記コマンドを実行する。
 ```
+cd /home/pi/deep-learning-from-scratch/ch03
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/digit_recognition_NN.py
 python3 digit_recognition_NN.py
 ```
 
 - 畳み込みニューラルネットワークによる推論
-`/home/pi/deep-learning-from-scratch/ch07`ディレクトリ上で下記コマンドを実行する。
 ```
+cd /home/pi/deep-learning-from-scratch/ch07
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/digit_recognition_CNN.py
 python3 digit_recognition_CNN.py
 ```
