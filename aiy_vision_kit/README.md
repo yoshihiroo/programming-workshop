@@ -1,4 +1,4 @@
-AI Implementation Guide using [AIY Vision Kit](https://aiyprojects.withgoogle.com/vision).
+AI Implementation Guide using [AIY Vision Kit](https://aiyprojects.withgoogle.com/vision).  
 [AIY Vision Kit](https://aiyprojects.withgoogle.com/vision)を使ったAI実装のガイド。
 
 | Directory | Contents |
