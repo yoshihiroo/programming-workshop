@@ -279,7 +279,7 @@ python3 resnet50.py
 ```
 
 6. Kerasを用いたサンプルプログラムの実行  
->Note:  
+>Note:  
 >`mjpg-streamer`を実行させた状態で`image_classification_resnet50`および`image_classification_mobilenet.py`を実行してください。
 - ResNet50
 ```
@@ -296,7 +296,7 @@ python3 image_classification_mobilenet.py
 
 識別結果の音声読み上げの実装
 ------------
->Note:  
+>Note:  
 >この章の内容は杉原洋輔さんに作成いただいたものです。杉原さんに感謝！
 
 1. スピーカーのテスト  
