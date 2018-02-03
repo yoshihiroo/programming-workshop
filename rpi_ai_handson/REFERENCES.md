@@ -40,3 +40,9 @@ Raspberry Piで何かを実装するまでの道のりは「守・破・離」�
 - [PythonでRaspberry Pi カメラを制御する](https://iotdiyclub.net/raspberry-pi-camera-python-1/)
 - [第8回: MJPG-streamerのインストール – Blue-black.ink](http://blue-black.ink/?page_id=2245)
 - [5GHz WiFi対応させたPi Zero rev1.3とPi Cameraでミニマムなネットワークカメラを作ってみた（mjpg-streamer版）](https://kitto-yakudatsu.com/archives/2338)
+
+#### 音声読み上げ
+- [Google翻訳](https://pypi.python.org/pypi/googletrans)
+- [Raspberry Pi + Open JTalkによる音声合成](http://raspibb2.blogspot.jp/2017/03/raspberry-pi-open-jtalk.html)
+
+
