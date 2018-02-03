@@ -294,10 +294,67 @@ python3 image_classification_mobilenet.py
 >Note:  
 >いずれのプログラムもKeras Documentationの[サンプルコード](https://keras.io/applications/)をもとに修正を加えたものです。
 
+7. espeakによる音声読み上げ  
+>Note:  
+>この章のガイドは杉原洋輔さんに作成いただいたものです。杉原さんに感謝！
+* スピーカーのテスト  
+ラズパイにスピーカーを接続し、`speaker-test -t sine -f 440`コマンドを実行するとスピーカーからテスト音が鳴る。`Ctl+c`で終了。
+
+* 音声読み上げソフトespeakのインストール  
+```
+sudo apt-get update
+sudo apt-get install espeak
+```
+`espeak "hello" 2>/dev/null`コマンドを実行し、スピーカーから"Hello"の音声が出ることを確認する。
+>Note:  
+>後ろについている`2>/dev/null`はエラーメッセージを画面に出さないための処置です。`espeak "hello"`のみで実行するとALSA libに関連したエラーが多数表示されます。本来であればエラーが出ないように対処すべきですが、ガイドが複雑になるため今回は「臭い物に蓋をする」やり方で回避します。
+
+* Google翻訳のインストール  
+```
+sudo pip3 install googletrans
+```
+
+* OpenJTalk(日本語読み上げモジュール)のインストール  
+```
+sudo apt-get install open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
+wget https://sourceforge.net/projects/mmdagent/files/MMDAgent_Example/MMDAgent_Example-1.7/MMDAgent_Example-1.7.zip/download -O MMDAgent_Example-1.7.zip
+unzip MMDAgent_Example-1.7.zip MMDAgent_Example-1.7/Voice/*
+sudo cp -r MMDAgent_Example-1.7/Voice/mei/ /usr/share/hts-voice
+
+wget https://raw.githubusercontent.com/neuralassembly/raspi/master/speech.sh
+chmod a+x speech.sh
+sudo mv speech.sh /usr/local/bin
+speech.sh 'ラズベリーパイで日本語音声読み上げのテストを実施しています'
+```
+
+* 音声の変更(デフォルト男性⇒女性)  
+`sudo nano /usr/local/bin/speech.sh`でファイルを開く。HTSVOICEの設定を変えることで音声を変えることができる。例えば下記のように1行目をコメントアウトし、2行目のコメントアウトを外すと、メイちゃん([Open JTalkを作っている名古屋工業大学のマスコットキャラ](http://mei.web.nitech.ac.jp/))の明るい声に変更できる。
+```
+#HTSVOICE=/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsv$
+HTSVOICE=/usr/share/hts-voice/mei/mei_happy.htsvoice
+#HTSVOICE=/usr/share/hts-voice/mei/mei_angry.htsvoice
+#HTSVOICE=/usr/share/hts-voice/mei/mei_bashful.htsvoice
+#HTSVOICE=/usr/share/hts-voice/mei/mei_normal.htsvoice
+#HTSVOICE=/usr/share/hts-voice/mei/mei_sad.htsvoice
+```
+
+
+
+※HTSVOICEを変更する
+
+■画像認識結果を読み上げる
+python3 image_classification_mobilenet_jtalk.py
+python3 image_classification_resnet50_jtalk.py
+
+
+
+
+
+
 (オプション)その他の設定
 ------------
 1. 別の無線LANへの接続  
-自宅など他の無線LANに接続する場合は「2. ヘッドレスセットアップのための準備」と同様に、ルートディレクトリに`wpa_supplicant.conf`ファイルを置くことで設定ファイルが上書きされる。
+自宅など他の無線LANに接続する場合は、USB-シリアルケーブルで接続した状態でraspi-configからNetwork Optionsを設定するか、もしくは`wpa_supplicant.conf`ファイルを直接書き換えることで設定変更ができる。
 
 2. VNCの設定  
 VNCを使うと、リモートからデスクトップ環境を使うことができる。
