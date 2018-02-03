@@ -299,7 +299,7 @@ python3 image_classification_mobilenet.py
 >Note:  
 >この章の内容は杉原洋輔さんに作成いただいたものです。杉原さんに感謝！
 
-1. スピーカーのテスト  
+1. スピーカーのテスト  
 ラズパイにスピーカーを接続し、`speaker-test -t sine -f 440`コマンドを実行するとスピーカーからテスト音が鳴る。`Ctl+c`で終了。
 
 2. 音声読み上げソフトespeakのインストール  
