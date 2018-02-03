@@ -294,13 +294,15 @@ python3 image_classification_mobilenet.py
 >Note:  
 >いずれのプログラムもKeras Documentationの[サンプルコード](https://keras.io/applications/)をもとに修正を加えたものです。
 
-7. espeakによる音声読み上げ  
+識別結果の音声読み上げの実装
+------------
 >Note:  
->この章のガイドは杉原洋輔さんに作成いただいたものです。杉原さんに感謝！
-* スピーカーのテスト  
+>この章の内容は杉原洋輔さんに作成いただいたものです。杉原さんに感謝！
+
+1. スピーカーのテスト  
 ラズパイにスピーカーを接続し、`speaker-test -t sine -f 440`コマンドを実行するとスピーカーからテスト音が鳴る。`Ctl+c`で終了。
 
-* 音声読み上げソフトespeakのインストール  
+2. 音声読み上げソフトespeakのインストール  
 ```
 sudo apt-get update
 sudo apt-get install espeak
@@ -309,12 +311,12 @@ sudo apt-get install espeak
 >Note:  
 >後ろについている`2>/dev/null`はエラーメッセージを画面に出さないための処置です。`espeak "hello"`のみで実行するとALSA libに関連したエラーが多数表示されます。本来であればエラーが出ないように対処すべきですが、ガイドが複雑になるため今回は「臭い物に蓋をする」やり方で回避します。
 
-* Google翻訳のインストール  
+3. Google翻訳のインストール  
 ```
 sudo pip3 install googletrans
 ```
 
-* OpenJTalk(日本語読み上げモジュール)のインストール  
+4. OpenJTalk(日本語読み上げモジュール)のインストール  
 ```
 sudo apt-get install open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
 wget https://sourceforge.net/projects/mmdagent/files/MMDAgent_Example/MMDAgent_Example-1.7/MMDAgent_Example-1.7.zip/download -O MMDAgent_Example-1.7.zip
@@ -327,7 +329,7 @@ sudo mv speech.sh /usr/local/bin
 speech.sh 'ラズベリーパイで日本語音声読み上げのテストを実施しています'
 ```
 
-* 音声の変更(デフォルト男性⇒女性)  
+5. 音声の変更(デフォルト男性⇒女性)  
 `sudo nano /usr/local/bin/speech.sh`でファイルを開く。HTSVOICEの設定を変えることで音声を変えることができる。例えば下記のように1行目をコメントアウトし、2行目のコメントアウトを外すと、メイちゃん([Open JTalkを作っている名古屋工業大学のマスコットキャラ](http://mei.web.nitech.ac.jp/))の明るい声に変更できる。
 ```
 #HTSVOICE=/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsv$
@@ -338,14 +340,12 @@ HTSVOICE=/usr/share/hts-voice/mei/mei_happy.htsvoice
 #HTSVOICE=/usr/share/hts-voice/mei/mei_sad.htsvoice
 ```
 
-*  画像認識結果を読み上げる  
-python3 image_classification_mobilenet_jtalk.py
-python3 image_classification_resnet50_jtalk.py
-
-
-
-
-
+6. 画像認識結果を読み上げる  
+前章のMobileNetsのプログラムに、音声読み上げ部分を追加したものを実行する。認識結果がテキストで表示されると同時に、英語・日本語の両方で読み上げられる。
+```
+wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/rpi_ai_handson/image_classification_mobilenet_jtalk.py
+python3 image_classification_mobilenet_jtalk.py 2>/dev/null
+```
 
 (オプション)その他の設定
 ------------
