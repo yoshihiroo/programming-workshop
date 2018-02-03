@@ -50,6 +50,7 @@ c.NotebookApp.password = u'sha1:xxxxxxxxxx(ここに先ほどのパスワード�
 ホームディレクトリ上でファイルを解凍する。
 ```
 cd ~
+wget https://github.com/yoshihiroo/programming-workshop/raw/master/deep_learning_jupyter/workshop.tar.gz
 tar zxvf workshop.tar.gz
 ```
 レクチャー中に誤ってnotebookを削除してしまわないように、`sudo chattr +i <ファイル名>`で削除不可のフラグを立ておくと良い。
