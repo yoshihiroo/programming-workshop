@@ -20,9 +20,3 @@ while True:
 
     preds = model.predict(x)
     print('Predicted:', decode_predictions(preds, top=3)[0])
-
-# espeak
-#    recognize = decode_predictions(preds)
-#    speak = "This is a " + recognize[0][0][1]
-#    subprocess.check_output(["espeak", "-k5", "-s150", speak])
-#    print(speak)
