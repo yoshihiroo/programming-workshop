@@ -338,11 +338,7 @@ HTSVOICE=/usr/share/hts-voice/mei/mei_happy.htsvoice
 #HTSVOICE=/usr/share/hts-voice/mei/mei_sad.htsvoice
 ```
 
-
-
-※HTSVOICEを変更する
-
-■画像認識結果を読み上げる
+*  画像認識結果を読み上げる  
 python3 image_classification_mobilenet_jtalk.py
 python3 image_classification_resnet50_jtalk.py
 
