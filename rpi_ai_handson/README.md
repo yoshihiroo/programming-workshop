@@ -1,6 +1,6 @@
 | ドキュメント | 内容 |
 ----|----
-| [README.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/README.md) | 当ドキュメント。機材購入ガイド、事前の準備 |
+| [README.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/README.md#%E6%A9%9F%E6%9D%90%E8%B3%BC%E5%85%A5%E3%82%AC%E3%82%A4%E3%83%89) | 当ドキュメント。機材購入ガイド、事前の準備 |
 | [HANDSON_GUIDE.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/HANDSON_GUIDE.md) | ハンズオン当日に使うガイド。実装の詳細なステップ |
 | [REFERENCES.md](https://github.com/yoshihiroo/programming-workshop/blob/master/rpi_ai_handson/REFERENCES.md) | ガイド作成にあたって参考にした外部情報、リンク |
 
