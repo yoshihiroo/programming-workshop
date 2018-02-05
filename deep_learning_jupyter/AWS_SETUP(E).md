@@ -1,19 +1,19 @@
-# AWSセットアップ
+# Setting up AWS
 
-## セキュリティーグループを作成
-TCPポート8888を解放
+## Create Security Group
+Opening TCP Port 8888
 
-## 固定IPアドレスの設定
-インスタンス起動時や再起動時にIPアドレスが毎回変わってしまうと不便なので、Elastic IPを使って固定アドレスを取得しておくと良い。
+## Configure Static IP Address
+Recommend using static address by Elastic IP for not be changed IP address every time instance startup or restarting
 
-## AWSインスタンス作成
+## Create AWS Instance
 - Ubuntu Server 16.04 LTS
-- t2.micro(無償枠)
-- ストレージ30GB
-- セキュリティーグループの設定 先ほど作成したものに紐づけ
-- IPアドレスをElastic IPで設定したものに紐づけ
+- t2.micro
+- 30GB Storage
+- Configure Security Group - Attache to previously defined group
+- Bonding IP address to Elastic IP
 
-以下、AWSコンソールにログインした状態で設定を行う。
+Proceed settings below while logged in to the AWS console.
 
 ## Anacondaパッケージのインストール
 [https://repo.continuum.io/archive/](https://repo.continuum.io/archive/)で最新パージョンを確認。下記の例は`Anaconda3-5.0.0.1-Linux-x86_64`。
