@@ -1,5 +1,3 @@
-***THIS DOCUMENT IS STILL DFAFT***
-
 # Setting up AWS (English Version)
 
 ## Create Security Group
@@ -69,7 +67,7 @@ If you want to keep notebook running while logging off from the console, replace
 
 ## Login to Jupyter
 Enter the URL (http: // <IP address>: 8888) directly in the PC's web browser and login to the Jupyter environment. When required a password, enter what you set above.
-In addition, it takes a little time to download the data file when executing "3-1. Display MNIST data" of `file3_gakusyu.ipynb` for the first time after building the AWS environment. The following download status is displayed on the screen.
+In addition, it takes a little time to download the data file when executing "3-1. Display MNIST data" of `file3_gakusyu_E.ipynb` for the first time after building the AWS environment. The following download status is displayed on the screen.
 ```
 Downloading train-images-idx3-ubyte.gz ... 
 Done
