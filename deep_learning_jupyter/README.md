@@ -6,7 +6,7 @@
 
 | File | Contents |
 ----|----
-| [AWS_SETUP.md](https://github.com/yoshihiroo/programming-workshop/blob/master/deep_learning_jupyter/AWS_SETUP_E.md) | Building Jupyter Environment on AWS |
+| [AWS_SETUP_E.md](https://github.com/yoshihiroo/programming-workshop/blob/master/deep_learning_jupyter/AWS_SETUP_E.md) | Building Jupyter Environment on AWS |
 | [file1_vector_and_matrix_E.ipynb](https://github.com/yoshihiroo/programming-workshop/blob/master/deep_learning_jupyter/file1_vector_and_matrix_E.ipynb) | Vector and Matrix |
 | [file2_two_layer_NN_E.ipynb](https://github.com/yoshihiroo/programming-workshop/blob/master/deep_learning_jupyter/file2_two_layer_NN_E.ipynb) | Neural-Network Expression by Matrix |
 | [file3_gakusyu_E.ipynb](https://github.com/yoshihiroo/programming-workshop/blob/master/deep_learning_jupyter/file3_gakusyu_E.ipynb) | Hand-writing Digits Recognition |
