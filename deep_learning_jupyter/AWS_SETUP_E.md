@@ -66,7 +66,7 @@ jupyter notebook
 If you want to keep notebook running while logging off from the console, replace the last line with `nohup jupyter notebook> .nohup.out &`. In that case, to terminate Jupyter, confirm the corresponding PID with the `ps` command and terminate the process with` kill` command.
 
 ## Login to Jupyter
-Enter the URL (http: // <IP address>: 8888) directly in the PC's web browser and login to the Jupyter environment. When required a password, enter what you set above.
+Enter the URL (http://(IP address):8888) directly in the PC's web browser and login to the Jupyter environment. When required a password, enter what you set above.
 In addition, it takes a little time to download the data file when executing "3-1. Display MNIST data" of `file3_gakusyu_E.ipynb` for the first time after building the AWS environment. The following download status is displayed on the screen.
 ```
 Downloading train-images-idx3-ubyte.gz ... 
