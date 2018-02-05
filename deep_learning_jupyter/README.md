@@ -1,4 +1,4 @@
-# ゼロから学ぶディープラーニング - AWS上のJupyterを使ったハンズオン : Deep Learning Tutorials on AWS/Jupyter
+# Deep Learning Tutorials on AWS/Jupyter - ゼロから学ぶディープラーニング/AWS上のJupyterを使ったハンズオン
 
 [![](https://scontent.fngo1-1.fna.fbcdn.net/v/t1.0-9/22815614_1724789167594612_2013643824872588581_n.jpg?oh=a614d605819f5cac67d290c417f2a8d8&oe=5B155FFA)](https://github.com/yoshihiroo/programming-workshop/tree/master/deep_learning_jupyter)
 
