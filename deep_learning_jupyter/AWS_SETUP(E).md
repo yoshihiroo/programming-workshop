@@ -10,7 +10,7 @@ Recommend using static address by Elastic IP for not be changed IP address every
 - Ubuntu Server 16.04 LTS
 - t2.micro
 - 30GB Storage
-- Configure Security Group - Attache to previously defined group
+- Configure Security Group - Attach to previously defined group
 - Bonding IP address to Elastic IP
 
 Proceed settings below while logged in to the AWS console.
