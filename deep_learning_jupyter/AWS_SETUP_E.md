@@ -1,6 +1,6 @@
 ***THIS DOCUMENT IS STILL DFAFT***
 
-# Setting up AWS
+# Setting up AWS (English Version)
 
 ## Create Security Group
 Opening TCP Port 8888
