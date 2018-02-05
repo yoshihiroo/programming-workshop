@@ -1,3 +1,5 @@
+***THIS DOCUMENT IS STILL DFAFT***
+
 # Setting up AWS
 
 ## Create Security Group
