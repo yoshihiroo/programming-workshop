@@ -71,8 +71,7 @@ After saving the script, add the executable flag by `chmod 755 start_stream.sh` 
 
 After typing `./start_stream.sh` on the home directory, after starting mjpg-streamer, you can see the broadcasted image from the camera by accessing Pi Zero's IP address, port 9000 by the web browser.
   
-
-例：`http://192.168.xx.xx:9000`  
+example: `http://192.168.xx.xx:9000`  
 
 To stop mjpg-streamer, check the process number with the `ps` command and `kill` the process.
 
