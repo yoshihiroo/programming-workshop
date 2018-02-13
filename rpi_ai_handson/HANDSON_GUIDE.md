@@ -211,12 +211,12 @@ Kerasによる物体識別の実装
 ```
 cd
 sudo apt-get install libblas-dev liblapack-dev python-dev libatlas-base-dev gfortran python-setuptools
-curl -O http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/lastSuccessfulBuild/artifact/output-artifacts/tensorflow-1.6.0rc0-cp34-none-any.whl
-mv tensorflow-1.6.0rc0-cp34-none-any.whl tensorflow-1.6.0rc0-cp35-none-any.whl
-sudo pip3 install tensorflow-1.6.0rc0-cp35-none-any.whl
+curl -O http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/122/artifact/output-artifacts/tensorflow-1.5.0-cp34-none-any.whl
+mv tensorflow-1.5.0-cp34-none-any.whl tensorflow-1.5.0-cp35-none-any.whl
+sudo pip3 install tensorflow-1.5.0-cp35-none-any.whl
 ```
 >Note:  
->上記は2018/2/14時点でのパッケージ名を用いていますが、今後のバージョンアップに伴い適宜パッケージ名を変更してください。[プロジェクトのサイト](http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/)でファイル名を確認できます。
+>上記は2018/2/14時点での安定バージョンのパッケージ名を用いていますが、今後のバージョンアップに伴い適宜パッケージ名を変更してください。[プロジェクトのサイト](http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/)でファイル名を確認できます。
 
 2. TensorFlow動作テスト  
 ```
