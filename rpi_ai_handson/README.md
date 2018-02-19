@@ -37,8 +37,9 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 * 解凍ツール -- [7Zip](http://www.7-zip.org/download.html) (Windows) or [The Unarchiver](http://www.7-zip.org/download.html) (Mac)
 * OSイメージ書き込みツール -- [Etcher](https://etcher.io/) (Windows/Mac共通)
 * ターミナルソフト(Windowsの方のみ) -- [Tera Term(Windows)](https://forest.watch.impress.co.jp/library/software/utf8teraterm/)、もしくはChromeブラウザーの方は拡張機能[Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=ja)でも良い
-* USB-シリアル変換ケーブル用ドライバー -- ケーブルが手元に届いたら[Prolific USB To Serial Driver "Code 10" Fix](http://www.ifamilysoftware.com/news37.html)を参照のうえ、Windows 64bit|32bitに気を付けながら指示通りにセットアップを行ってください。インストールが完了したら、ケーブルをPCのUSBポートに接続した状態(色のついた4本の細いコネクタ側は未接続のまま)で、デバイスマネージャーの「ポート(COMとLPT)」にデバイスが正しく見えることを確認してください。Macの場合は外部のブログ記事([Macと Raspberry Pi 3 をシリアル接続する
-](https://qiita.com/tmishina/items/612d7d1a7d76364a9e45)、[Raspberry PiをUART通信で操作する](https://qiita.com/shishamo_dev/items/9735ce2fcdd26cf46577))を参照ください。
+* USB-シリアル変換ケーブル用ドライバー
+  * Windows -- ケーブルが手元に届いたら[Prolific USB To Serial Driver "Code 10" Fix](http://www.ifamilysoftware.com/news37.html)を参照のうえ、Windows 64bit|32bitに気を付けながら指示通りにセットアップを行ってください。インストールが完了したら、ケーブルをPCのUSBポートに接続した状態(色のついた4本の細いコネクタ側は未接続のまま)で、デバイスマネージャーの「ポート(COMとLPT)」にデバイスが正しく見えることを確認してください。
+  * Mac -- [Raspberry Pi 3 事前準備設定](https://github.com/ysfmiwn/raspberry-pi/blob/master/README.md)を参照ください。(岩野義史さん、わかりやすくまとめてくださって、ありがとうございます！)
 
 2. OSイメージのダウンロード  
 ファイルの大きさが数ギガバイトあり、ダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。  
