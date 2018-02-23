@@ -211,12 +211,12 @@ Kerasによる物体識別の実装
 ```
 cd
 sudo apt-get install libblas-dev liblapack-dev python-dev libatlas-base-dev gfortran python-setuptools
-curl -O http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/122/artifact/output-artifacts/tensorflow-1.5.0-cp34-none-any.whl
-mv tensorflow-1.5.0-cp34-none-any.whl tensorflow-1.5.0-cp35-none-any.whl
-sudo pip3 install tensorflow-1.5.0-cp35-none-any.whl
+wget "https://drive.google.com/uc?export=download&id=1HvzS1g2xy-RiAZvz_A2BHhr79lYAHE4f" -O tensorflow-1.4.0-cp34-none-any.whl
+mv tensorflow-1.4.0-cp34-none-any.whl tensorflow-1.4.0-cp35-none-any.whl
+sudo pip3 install tensorflow-1.4.0-cp35-none-any.whl
 ```
 >Note:  
->上記は2018/2/14時点での安定バージョンのパッケージ名を用いていますが、今後のバージョンアップに伴い適宜パッケージ名を変更してください。[プロジェクトのサイト](http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/)でファイル名を確認できます。
+>インストール時間短縮のため、ここでは古いバージョンのTensorFlowパッケージを使います。新しいバージョンを使いたい場合は、[プロジェクトのサイト](http://ci.tensorflow.org/view/Nightly/job/nightly-pi-python3/)でファイル名を確認し適宜差し替えてください。
 
 2. TensorFlow動作テスト  
 ```
@@ -244,13 +244,13 @@ output probability:
 3. Kerasのインストール  
 下記のコマンドを実行しKerasライブラリと必要なモジュールをインストールする。
 ```
-sudo pip3 install keras==2.1.3
+sudo pip3 install keras==2.1.2
 sudo pip3 install h5py
 sudo apt-get install python-h5py
 sudo pip3 install numpy --upgrade
 ```
 >Note:  
->TensorFlowと同様にKerasについても最新バージョンを[ウェブサイト](https://pypi.python.org/pypi/Keras)で確認したうえで、上記の`2.1.3`の箇所を変更してください。
+>TensorFlowと同様に、より新しいバージョンのKerasを使いたい場合は、[ウェブサイト](https://pypi.python.org/pypi/Keras)で確認したうえで、上記の`2.1.2`の箇所を変更してください。
 
 
 4. スワップ領域の拡大  
