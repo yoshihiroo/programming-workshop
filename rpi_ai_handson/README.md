@@ -43,7 +43,7 @@ SDカードをパソコンで読み書きするためのUSBデバイスとなり
 
 2. OSイメージのダウンロード  
 ファイルの大きさが数ギガバイトあり、ダウンロードに時間がかかりますので、下記リンクより各自のPCに事前にダウンロードをしておいてください。またこのファイルを解凍すると約6ギガバイトのファイルになりますのでPCのハードディスクの空き容量にもご注意ください。  
-* [RASPBIAN STRETCH WITH DESKTOP(Release date:2017-11-29)](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian/images/raspbian-2017-12-01/2017-11-29-raspbian-stretch.zip)
+* [RASPBIAN STRETCH WITH DESKTOP(Release date:2018-03-13)](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian/images/raspbian-2018-03-14/2018-03-13-raspbian-stretch.zip)
 
 3. 起動の確認  
 大まかな手順は、以下の流れになります。
