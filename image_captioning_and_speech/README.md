@@ -1,4 +1,4 @@
-Deep Learning on Raspberry Pi - Real time Image Captioning and Speech
+Deep Learning on Raspberry Pi - Real Time Image Captioning and Speech
 -------
 ![Overview](https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/image_captioning_and_speech/figure/WS000000.JPG)
 
