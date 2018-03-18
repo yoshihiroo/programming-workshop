@@ -69,3 +69,9 @@ wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/im
 ```
 
 Run the captioning program by `python3 image_captioning_and_speech/image_captioning.py`.
+
+Let's take a walk with the device and have fun!
+-------
+[![](https://img.youtube.com/vi/ZksVPw-LPbw/0.jpg)](https://www.youtube.com/watch?v=ZksVPw-LPbw)
+
+
