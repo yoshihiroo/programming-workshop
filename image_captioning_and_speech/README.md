@@ -1,4 +1,4 @@
->This project is based on [the source code created by Satoshi Tsutsui](https://github.com/apple2373/chainer-caption). See also his work based on his code at the arXiv - [Using Artificial Tokens to Control Languages for Multilingual
+>This project uses [the source code created by Satoshi Tsutsui](https://github.com/apple2373/chainer-caption). See also his work based on his code at the arXiv - [Using Artificial Tokens to Control Languages for Multilingual
 Image Caption Generation: arXiv:1706.06275](https://arxiv.org/abs/1706.06275)
 
 Deep Learning on Raspberry Pi - Real Time Image Captioning and Speech
