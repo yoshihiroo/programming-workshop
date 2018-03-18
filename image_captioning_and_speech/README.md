@@ -1,13 +1,12 @@
 THIS PAGE IS STILL UNDER CONSTRUCTION !!
 -------
 
-
-
 Deep Learning on Raspberry Pi - Real Time Image Captioning and Speech
 -------
 ![Overview](https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/image_captioning_and_speech/figure/WS000000.JPG)
 
->This project is based on [the source code created by Satoshi Tsutsui](https://github.com/apple2373/chainer-caption) and I added several codes.
+>This project is based on [the source code created by Satoshi Tsutsui](https://github.com/apple2373/chainer-caption). See also his work based on his code at the arXiv - [Using Artificial Tokens to Control Languages for Multilingual
+Image Caption Generation: arXiv:1706.06275](https://arxiv.org/abs/1706.06275)
 
 Hardwares Used in This Project
 -------
