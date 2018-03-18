@@ -25,6 +25,7 @@ Install required programs and tools by commands below.
 sudo apt-get install git
 sudo apt-get install python3-pip
 sudo pip3 install chainer==1.19.0
+sudo pip3 install Pillow
 sudo apt-get install espeak
 sudo apt-get install python3-picamera
 ```
