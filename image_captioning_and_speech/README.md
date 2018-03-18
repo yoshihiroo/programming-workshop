@@ -28,9 +28,14 @@ sudo pip3 install chainer==1.19.0
 sudo pip3 install Pillow
 sudo apt-get install espeak
 sudo apt-get install python3-picamera
+sudo apt-get install libopenjp2-7-dev
+sudo apt install libtiff5
+sudo pip3 install scipy
+sudo pip3 install h5py
+sudo apt-get install python-h5py
 ```
 
-Download Source Codes and Run
+Download Test Code and Run
 -------
 Download from the Git repository and test sample code by commands below.
 ```
@@ -40,7 +45,7 @@ bash download.sh
 python3 sample_code_beam.py --rnn-model ./data/caption_en_model40.model --cnn-model ./data/ResNet50.model --vocab ./data/MSCOCO/mscoco_caption_train2014_processed_dic.json --gpu -1 --img ./sample_imgs/COCO_val2014_000000185546.jpg
 ```
 
-If installed properly, the result will be displayed as below. There might be some warnings.
+If installed properly, the result will be displayed as below. (There might be some warnings..)
 
 ```
 <sos> a bathroom with a toilet and a shower <eos>
@@ -50,4 +55,3 @@ If installed properly, the result will be displayed as below. There might be som
 <sos> a bathroom with a toilet , sink , and shower <eos>
 -8.537529528141022
 ```
-  
