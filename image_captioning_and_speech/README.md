@@ -38,3 +38,16 @@ git clone https://github.com/apple2373/chainer-caption.git
 cd chainer-caption
 bash download.sh
 python3 sample_code_beam.py --rnn-model ./data/caption_en_model40.model --cnn-model ./data/ResNet50.model --vocab ./data/MSCOCO/mscoco_caption_train2014_processed_dic.json --gpu -1 --img ./sample_imgs/COCO_val2014_000000185546.jpg
+```
+
+If installed properly, the result will be displayed as below. There might be some warnings.
+
+```
+<sos> a bathroom with a toilet and a shower <eos>
+-6.967587262392044
+<sos> a bathroom with a toilet , sink , and mirror <eos>
+-7.618740811944008
+<sos> a bathroom with a toilet , sink , and shower <eos>
+-8.537529528141022
+```
+  
