@@ -64,7 +64,7 @@ In the `/home/pi/chainer-caption`directory, download the captioning program from
 wget https://raw.githubusercontent.com/yoshihiroo/programming-workshop/master/image_captioning_and_speech/image_captioning.py
 ```
 
-Run the captioning program by `python3 image_captioning_and_speech/image_captioning.py`.
+Run the captioning program by `python3 image_captioning.py`.
 
 Let's take a walk with the device and have fun!
 -------
