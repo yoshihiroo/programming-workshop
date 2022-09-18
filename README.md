@@ -3,6 +3,7 @@ Repository of Programming Workshop.
 
 | Directory | Contents | Date |
 ----|----|---- 
+| [QC4U Cirq写経翻訳](https://github.com/yoshihiroo/programming-workshop/tree/master/QC4U_2022) | 東北大学 大関先生によるQuantum computing for you (QC4U)の解説コードのCirq翻訳 |  |
 | [image_captioning_and_speech](https://github.com/yoshihiroo/programming-workshop/tree/master/image_captioning_and_speech) | Real Time Image Captioning and Speech on Raspberry Pi - Raspberry Piカメラを使ったリアルタイム画像キャプション生成 |  |
 | [aiy_vision_kit](https://github.com/yoshihiroo/programming-workshop/tree/master/aiy_vision_kit) | AI Implementation on Google AIY Vision Kit - Google AIY Vision Kitを使ったAI実装 |
 | [rpi_ai_handson](https://github.com/yoshihiroo/programming-workshop/tree/master/rpi_ai_handson) | Deep Learning Implementation on Raspberry Pi - Raspberry PiによるDeep Learning実装 | 2018/1/27 |
